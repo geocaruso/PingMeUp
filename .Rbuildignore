@@ -1,0 +1,11 @@
+^dev/
+  ^README\.html$
+  ^README_files/
+  ^vignettes/.*\.html$
+  ^\.Rproj\.user$
+  ^.*\.Rproj$
+  ^\.RData$
+  ^\.git$
+  ^\.gitignore$
+^doc$
+^Meta$

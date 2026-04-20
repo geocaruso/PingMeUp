@@ -1,0 +1,515 @@
+"ordre","indice","adresse_clean","latitude","longitude","comments"
+1,"A003","Donkerlei 72, 2800 Mechelen",51.036583,4.478875,NA
+2,"A008","Martouginlei 74, 2930 Brasschaat",51.302387,4.493729,NA
+3,"A062","Turnhoutsebaan 357, 2140 Borgerhout",51.214459,4.442516,NA
+4,"A074","Elzenstraat 33, 2540 Hove",51.147662,4.46971,NA
+5,"A075","Sint Hubertusplein 28, 2845 Niel",51.110185,4.328361,NA
+6,"A095","Slachthuisstraat 13C, 2300 Turnhout",51.308765,4.927098,NA
+7,"A097","Gemeentestraat 36A, 2560 Nijlen",51.162946,4.672422,NA
+8,"A105","Pastorijstraat 51, 2480 Dessel",51.243062,5.115896,NA
+9,"A115","Alpenroosstraat 26, 2590 Berlaar",51.118385,4.653235,NA
+10,"A117","Bel 19, 2440 Geel",51.164161,5.042852,NA
+11,"A118","Kruispad 14, 2310 Rijkevorsel",51.343384,4.750213,NA
+12,"A123","CorsicaBaan 1, 2275 Wechelderzande",51.272156,4.789239,NA
+13,"A127","Boesdijkhofstraat, 2470 Retie",51.270853,5.0836,"Street-level match only — no house number found"
+14,"A129","Louis Van Regenmortellei, 2150 Borsbeek",51.195546,4.487503,"Street-level match only — no house number found"
+15,"A130","Eksterdreef 12, 2900 Schoten",51.266774,4.506876,NA
+16,"A135","Schoolstraat, 2322 Minderhout",51.416136,4.759684,"Street-level match only — no house number found"
+17,"A136","De Reiger, 2980 Zoersel",51.265582,4.706202,"Street-level match only — no house number found"
+18,"A138","Dreefvelden 1, 2860 Sint-Katelijne-Waver",51.063435,4.533813,NA
+19,"A139","Leopoldlei 81, 2220 Hallaar",51.083078,4.728652,NA
+20,"A141","Hofeinde 9, 2330 Merksplas",51.36334,4.862214,NA
+21,"A142","Statielei 72, 2640 Mortsel",51.170084,4.454928,NA
+22,"A147","Brulens 36, 2275 Gierle",51.267426,4.862913,NA
+23,"A155","Fort II straat, 2160 Wommelgem",51.202492,4.490082,"Street-level match only — no house number found"
+24,"A159","Tervuursesteenweg 16, 2800 Mechelen",51.013059,4.483336,NA
+25,"A160","Pastorijstraat 50, 2800 Mechelen (Walem)",51.067457,4.460014,NA
+26,"A167","Gierlebaan 26, 2275 Lille",51.243049,4.825866,NA
+27,"A176","Albert Einsteinlaan 50, 2660 Hoboken",51.171371,4.37008,NA
+28,"A182","Schoutlaan 24, 2180 Ekeren",51.278875,4.449575,NA
+29,"A186","Floridastraat 42, 2830 Willebroek",51.05793,4.361075,NA
+30,"A201","Zuidgoordijkstraat 1, 2235 Hulshout",51.079027,4.807748,NA
+31,"A211","Idsteinlaan 18, 2070 Burcht (Zwijndrecht)",51.205008,4.342264,NA
+32,"A212","Bethanienlei 108C, 2980 Zoersel",51.277364,4.630637,NA
+33,"A218","Vond 3, 2382 Poppel",51.445015,5.039282,NA
+34,"BBW015","Avenue Ernest Renan 33, 1030 Schaerbeek",50.867384,4.383553,NA
+35,"BBW034","Avenue du Comté de Jette 3, 1090 Jette",50.883356,4.333546,NA
+36,"BBW118","Rue des Heures Claires 46, 1400 Nivelles",50.605266,4.33372,NA
+37,"BBW123","Rue Charles Jaumotte 156, 1300 Limal",50.700744,4.58218,NA
+38,"BBW134","Rue Van Kalck 93, 1080 Bruxelles",50.854164,4.310656,NA
+39,"BBW145","Chaussée de Wavre 1690, 1160 Bruxelles",50.815959,4.429891,"Same address as BBW165 (#42) and BBW321 (#57)"
+40,"BBW147","Chaussée de Vilvorde 170, 1120 Bruxelles",50.89945,4.402398,NA
+41,"BBW155","Allée des Sports, 1480 Tubize",50.685455,4.200953,"Street-level match only; less precise than BBW349 (#64) which has house number 5"
+42,"BBW165","Chaussée de Wavre 1690, 1160 Bruxelles",50.815959,4.429891,"Same address as BBW145 (#39) and BBW321 (#57)"
+43,"BBW179","Rue du Ménil 45, 1420 Braine-l'Alleud",50.687274,4.379904,NA
+44,"BBW190","Avenue Marathon 2, 1020 Laeken",50.892709,4.336059,NA
+45,"BBW194","Rue Général de Gaulle 53, 1310 La Hulpe",50.738944,4.485328,NA
+46,"BBW202","Rue de Veeweyde 80, 1070 Bruxelles",50.831325,4.305724,NA
+47,"BBW205","Rue de Russie 41, 1060 Bruxelles",50.835315,4.341177,NA
+48,"BBW214","Rue de l'Invasion 80, 1340 Ottignies LLN",50.667401,4.589509,NA
+49,"BBW223","Rue des Hayeffes 31, 1435 Mont-Saint-Guibert",50.637478,4.602748,NA
+50,"BBW264","Rue au Bois 159, 1083 Bruxelles",50.878177,4.300508,NA
+51,"BBW289","Rue du Presbytère 5, 1360 Thorembais-les-Béguines",50.658092,4.818648,NA
+52,"BBW291","Rue R. Francq 7, 1428 Lillois",50.644099,4.362921,NA
+53,"BBW299","Chaussée de Wavre 99, 1390 Grez-Doiceau",50.751453,4.696632,NA
+54,"BBW307","Rue de Samme 20, 1460 Virginal-Samme",50.645673,4.212185,NA
+55,"BBW315","Rue du Relais 23, 1370 Zetrud-Lumay (Jodoigne)",50.759291,4.884365,NA
+56,"BBW319","Rue Théophile Delbar 33, 1410 Waterloo",50.716902,4.394219,NA
+57,"BBW321","Chaussée de Wavre 1690, 1160 Bruxelles",50.815959,4.429891,"Same address as BBW145 (#39) and BBW165 (#42)"
+58,"BBW323","Avenue des Anciens Combattants, 1140 Bruxelles",50.864839,4.4096,"Street-level match only — no house number found"
+59,"BBW326","Rue de Fierlant 35, 1190 Bruxelles",50.827269,4.331037,NA
+60,"BBW338","Avenue des Combattants 94, 1470 Bousval",50.6163,4.510708,NA
+61,"BBW345","Place de la Constellation 3, 1300 Limal",50.71054,4.558096,NA
+62,"BBW347","Rue Auguste Danse 25A, 1180 Uccle",50.804642,4.333297,NA
+63,"BBW348","Rue de la Libération 25, 1440 Braine-le-Château",50.68296,4.27185,NA
+64,"BBW349","Allée des Sports 5, 1480 Tubize",50.683985,4.199816,NA
+65,"BBW350","Rue Chapelle Ste Anne 14, 1457 Walhain",50.617178,4.699015,NA
+66,"H001","Rue du Chemin Vert 125B, 6042 Lodelinsart",50.428,4.445558,NA
+67,"H004","Avenue du Scailmont 96, 7170 Manage",50.499559,4.242934,NA
+68,"H009","Rue des Haies 293, 6200 Châtelineau",50.419937,4.506514,NA
+69,"H041","Rue de Bouvy 127, 7100 La Louvière",50.469288,4.18247,NA
+70,"H054","Rue de l'Epinette 21, 7712 Herseaux",50.716128,3.246594,NA
+71,"H070","Rue des Bruyères 58, 6150 Anderlues",50.391405,4.276602,NA
+72,"H091","Rue de la Carrière 5, 7370 Wiheries (Dour)",50.3868,3.754833,NA
+73,"H092","Rue J. Jaurès 5, 7190 Ecaussinnes",50.567555,4.165639,NA
+74,"H095","Rue des Etudiants 8, 7700 Mouscron",50.740233,3.216518,NA
+75,"H099","Rue Notre Dame 39, 6560 Erquelinnes",50.3115,4.123147,NA
+76,"H107","Rue de Villers 206, 6010 Couillet",50.385397,4.476539,NA
+77,"H116","Rue du Marais, 7120 Peissant",50.351978,4.116845,"Street-level match only — no house number found"
+78,"H120","Rue du Roeulx 25, 7110 Maurage",50.460519,4.098614,NA
+79,"H122","Rue Eugène Valentin 22, 7110 Houdeng-Aimeries",50.48489,4.146031,NA
+80,"H128","Route de Thuin 120, 6530 Thuin",50.335704,4.335007,"Google resolved postal code as 6534 rather than 6530 — coordinates still correct"
+81,"H133","Rue Général Mellier 74, 1495 Tilly",50.560746,4.552879,NA
+82,"H136","Rue du Wainage 194, 6220 Lambusart",50.457788,4.559144,NA
+83,"H145","Rue Pont Bara 26, 6560 Solre-sur-Sambre",50.307555,4.156506,NA
+84,"H146","Rue de l'Esclinchamps 22, 6470 Sivry",50.166655,4.181293,NA
+85,"H147","Rue du Chemin Vert 125B, 6042 Lodelinsart",50.428,4.445558,NA
+86,"H149","Rue de Villers 208, 6010 Couillet",50.38544,4.476676,NA
+87,"H165","Rue Saint-Jacques, 7070 Le Roeulx",50.500133,4.11013,"Street-level match only — no house number found"
+88,"H177","Rue Valéry Happe, 7170 Bois d'Haine",50.494874,4.211207,"Street-level match only — no house number found"
+89,"H182","Rue Albert 1er 175, 6240 Farciennes",50.422812,4.534775,NA
+90,"H200","Avenue de l'Hôpital 6, 7000 Mons",50.455879,3.961539,NA
+91,"H202","Rue de Couillet 146C, 6200 Châtelet",50.401787,4.511909,NA
+92,"H203","Chemin à Rocs 4, 7060 Horrues",50.608834,4.03757,NA
+93,"H206","Chemin Preuscamp 18, 7822 Meslin l'Evêque",50.653795,3.854914,NA
+94,"H207","Rue de Rocroi 28, 6464 Baileux",50.029366,4.374963,NA
+95,"H215","Rue de l'Alliance 19, 7300 Boussu",50.412794,3.796517,NA
+96,"H218","Avenue Paul Pastur 3, 6032 Mont-sur-Marchienne",50.404258,4.433116,"Resolved to postal code 6001 instead of 6032 — Avenue Paul Pastur spans both zones; verify manually"
+97,"H220","Grand'Place 1, 6590 Momignies",50.030004,4.166192,NA
+98,"H227","Rue du Pont de la Cure 16C, 7900 Leuze-en-Hainaut",50.59806,3.611847,NA
+99,"H231","Rue Thabor 70, 7830 Bassilly",50.675292,3.936244,NA
+100,"H242","Chemin du Fichaux 1, 6181 Gouy-lez-Pieton",50.499786,4.343795,NA
+101,"H247","Rue de Virelles 18b, 6460 Chimay",50.049156,4.320624,NA
+102,"H249","Rue du Centre 33, 6470 Sautin",50.164224,4.226351,NA
+103,"H253","Rue du Thy 5, 7870 Lens",50.5573,3.89568,NA
+104,"H254","Rue du By 9B, 7022 Hyon",50.438007,3.965574,NA
+105,"H259","Boulevard Général Descamps 15, 6500 Beaumont",50.238169,4.235561,NA
+106,"H275","Rue de la Brasserie, 6464 Bourlers",50.02792,4.340058,"Street-level match only — no house number found"
+107,"H280","Chemin Joseph Lacasse 1, 7500 Tournai",50.599455,3.410835,NA
+108,"H287","Rue Salvador Allende 63, 7134 Leval-Trahegnies",50.418593,4.220291,NA
+109,"H290","Rue de la Verte Chasse, 7600 Peruwelz",50.50615,3.59606,"Street-level match only — no house number found"
+110,"H292","Rue Amant Dancart 35, 6280 Gerpinnes",50.333433,4.532943,NA
+111,"H296","Boulevard Emile Schevenels 24B, 7860 Lessines",50.713791,3.825554,NA
+112,"H297","Rue Porte A Camp, 7971 Basecles",50.522863,3.648504,"Street-level match only — no house number found"
+113,"H301","Rue de Renaix 38, 7890 Ellezelles",50.732801,3.67379,NA
+114,"H306","Rue Paul Verlaine 4, 7000 Mons",50.46391,3.951362,NA
+115,"H307","Rue des Augustins 37, 7500 Tournai",50.609195,3.380064,NA
+116,"H312","Rue Charon 29, 6280 Loverval",50.368251,4.468032,NA
+117,"H314","Rue de Couillet 146G, 6200 Chatelet",50.401953,4.511755,NA
+118,"H326","Rue Prayelle 2, 7522 Marquain",50.608265,3.322345,NA
+119,"H333","Rue des Ecoles 52-54, 7034 Obourg",50.475185,4.010969,NA
+120,"H334","Rue Général Leman 4a, 7340 Colfontaine",50.412903,3.849831,NA
+121,"H342","Rue de l'Eglise 12, 7950 Huissignies",50.564509,3.754137,NA
+122,"H351","Rue de l'Abattoir 2, 7380 Quievrain",50.408577,3.682435,NA
+123,"H359","Rue des Abliaux 48, 7536 Vaulx",50.59123,3.430922,NA
+124,"H360","Place, 6460 Villers-la-Tour",50.036389,4.26269,"Street-level match only — locality square matched"
+125,"H378","Route de Philippeville 304, 6010 Couillet",50.384803,4.463517,NA
+126,"H379","Avenue Paul Pastur 3, 6032 Mont-sur-Marchienne",50.404258,4.433116,"Matched to postal code 6001 rather than 6032 — on the boundary; verify manually"
+127,"H382","Rue des Préaux 1, 7321 Bernissart",50.472195,3.668183,NA
+128,"H384","Rue Quatrième, 7330 Saint-Ghislain",50.446301,3.814223,"Street-level match only — no house number found"
+129,"H387","Rue des Déportés 8, 7740 Pecq",50.686432,3.339791,NA
+130,"H393","Rue de l'Eglise Saint-Thomas 1bis, 7534 Maulde",50.617226,3.549645,NA
+131,"H399","Rue Hippolyte Boulenger 4, 7500 Tournai",50.602869,3.394288,NA
+132,"H400","Rue de la Crête 28b, 7880 Flobecq",50.732788,3.737088,NA
+133,"H405","Rue des Ecoles 49, 7540 Kain",50.627062,3.394902,NA
+134,"H410","Place de Gaurain 1, 7530 Gaurain-Ramecroix",50.590372,3.486178,NA
+135,"H413","Rue des Carrières, 6540 Lobbes",50.35469,4.265597,"Street-level match only — no house number found"
+136,"H414","Rue Haute 7, 6567 Merbes-le-Château",50.325056,4.164069,NA
+137,"H415","Rue Tillia 11, 6511 Strée",50.271845,4.30232,"Street-level match only — no house number found"
+138,"H422","Rue Ratiau, 7640 Antoing",50.569253,3.445626,"Street-level match only — no house number found"
+139,"H423","Sentier des Cinq Bonniers, 7062 Naast",50.55261,4.10077,"Street-level match only — no house number found"
+140,"H424","Rue des Postes 101, 7090 Braine-le-Comte",50.609323,4.127861,NA
+141,"H426","Rue Delval, 7170 Manage",50.501608,4.242841,NA
+142,"H428","Place de la Bourgogne 1, 7730 Estaimbourg",50.683431,3.321192,NA
+143,"H429","Place Dooms 6, 7012 Flenu",50.433261,3.890553,NA
+144,"H430","Avenue de la Déportation 17, 7190 Ecaussinnes",50.563205,4.160173,NA
+145,"H436","Rue Caebergs 6b, 6142 Leernes",50.396988,4.331833,NA
+146,"H438","Place André Renard 1, 6224 Wanfercee-Baulet",50.470402,4.586946,NA
+147,"H441","Rue du Viaduc 69, 7850 Enghien",50.697334,4.041795,NA
+148,"H442","Rue de la Libération 65, 7080 La Bouverie",50.405824,3.874685,NA
+149,"H443","Rue des Prés 84B, 7700 Mouscron",50.74994,3.190077,NA
+150,"H445","Rue du Pont Vert 14, 7504 Froidmont",50.575716,3.334408,NA
+151,"H446","Place d'Alcantara 5, 7181 Arquennes",50.56927,4.275051,NA
+152,"H447","Rue Louis De Brouckère 39, 7390 Quaregnon",50.433608,3.864958,NA
+153,"H448","Rue Albert 1er, 6560 Erquelinnes",50.307091,4.116728,"Street-level match only — no house number found"
+154,"H449","Rue du Couvent 59B, 7903 Blicquy",50.591847,3.687255,NA
+155,"H450","Rue des Fossés 15, 6120 Nalinnes",50.324791,4.446032,NA
+156,"H451","Rue des Écoles 32, 7141 Morlanwelz",50.450648,4.261754,NA
+157,"H452","Rue Célestin Pollet 13, 7711 Dottignies",50.725353,3.303929,NA
+158,"H453","Rue Tillia 11, 6511 Strée",50.272316,4.302538,"Approximated from nearby address on Rue Tilia — verify manually"
+159,"H454","Rue Grand Mouligneau 61, 6141 Forchies-la-Marche",50.43343,4.312681,NA
+160,"L002","Rue Wilson 54, 4830 Dolhain-Limbourg",50.621171,5.939506,NA
+161,"L003","Rue Neuve 43, 4860 Pepinster",50.566575,5.803309,NA
+162,"L029","Avenue du Hoyoux 7, 4500 Huy",50.514095,5.23811,NA
+163,"L030","Rue du Centenaire 71, 4032 Chenee",50.620766,5.620933,NA
+164,"L043","Route de Berneau, 4600 Vise",50.750277,5.749652,"Street-level match only — no house number found"
+165,"L066","Rue du Stade 6B, 4650 Herve",50.639169,5.790728,NA
+166,"L095","Rue Renier 41, 4800 Verviers",50.596726,5.867145,NA
+167,"L098","Route militaire 401, 4432 Alleur",50.681807,5.512664,NA
+168,"L111","Rue de la Longue Hayoulle, 4620 Fleron",50.611743,5.684818,"Street-level match only — no house number found"
+169,"L119","Rue du Doyard 114, 4040 Herstal",50.681785,5.631289,NA
+170,"L124","Rue des Tanneurs 4, 1350 Jandrain",50.672896,4.98002,NA
+171,"L125","Rue Grand-Ry 4, 4860 Wegnez",50.579146,5.816555,NA
+172,"L126","Rue du Chiroux 18, 4280 Thisnes",50.668896,5.046343,NA
+173,"L143","Chaussée d'Ivoz 65, 4400 Ivoz-Ramet",50.589506,5.467759,NA
+174,"L152","Voie de l'Air Pur 217, 4052 Beaufays",50.563752,5.635534,NA
+175,"L165","Rue de l'Yser 10, 4920 Aywaille",50.475135,5.671146,NA
+176,"L170","Rue de l'Institut 66, 4632 Heuseux",50.65776,5.715939,NA
+177,"L179","Ruelle Simon, 4800 Lambermont",50.59106,5.831437,"Street-level match only — no house number found"
+178,"L184","Avenue du Stade 19, 4910 Theux",50.539593,5.809587,NA
+179,"L185","Rue de l'Institut 30, 4670 Blegny",50.67368,5.722524,NA
+180,"L193","Rue de la Station 37, 4537 Verlaine",50.603514,5.322167,NA
+181,"L199","Rue des Croix-de-Guerre 4, 4020 Liege",50.627033,5.582514,NA
+182,"L205","Rue A. Braas 11, 4317 Faimes",50.657779,5.252165,NA
+183,"L217","Rue d'Esneux 26, 4140 Dolembreux",50.535737,5.628934,NA
+184,"L218","Rue Lambert Marlet 13, 4670 Blegny",50.684082,5.722324,NA
+185,"L230","Rue Grand Marchin 18, 4570 Marchin",50.464191,5.23861,NA
+186,"L234","Rue de Boëlhe 33, 4250 Geer",50.675643,5.170704,NA
+187,"L246","Avenue Paul Brien 4, 4280 Hannut",50.671019,5.071579,NA
+188,"L252","Rue Emile Goedert 2, 4970 Francorchamps",50.454371,5.951968,NA
+189,"L257","Rue du Centre 21, 4500 Huy",50.52699,5.258367,NA
+190,"L263","Rue Jules Beaumont 1, 4400 Flemalle",50.599281,5.410227,NA
+191,"L264","Rue de l'Ecole 12, 4845 Sart-Jalhay",50.51348,5.935594,NA
+192,"L266","Chaussée de Tongres 235, 4540 Amay",50.556079,5.30528,NA
+193,"L267","Rue de Huy 192, 4317 Faimes (Viemme)",50.649524,5.267453,NA
+194,"L272","Kaperberg, 4700 Eupen",50.630301,6.04169,"Road name only matched — no house number in database; verify manually"
+195,"L274","Rue de l'Eglise 8, 4840 Welkenraedt",50.660797,5.971651,NA
+196,"L275","Rue des Templiers 23, 4357 Donceel",50.639812,5.315596,NA
+197,"L276","Rue Géo Warzée 19, 4520 Wanze",50.53715,5.221916,NA
+198,"L282","Rue du Bois Rosine 7, 4577 Modave (Vierset)",50.491213,5.323557,NA
+199,"L284","Rue Hubert Denis 24, 4850 Montzen",50.707357,5.95599,NA
+200,"L293","Rue du Chaufour 6, 1350 Orp-le-Grand",50.703541,4.987486,NA
+201,"L295","Rue Mulhoff 70, 4300 Waremme (Bettincourt)",50.712284,5.23228,NA
+202,"L296","Rue Altenberg 15, 4728 Hergenrath",50.709029,6.04312,"Rue Altenberg not found precisely — coordinates point to Hergenrath locality centre; verify manually"
+203,"L310","Rue sur Fosse 26, 4560 Clavier",50.429135,5.326643,NA
+204,"L312","Place du Marché 9, 4621 Retinne",50.63449,5.702429,NA
+205,"L313","Chemin des Campanules 7, 4950 Robertville",50.455564,6.125086,NA
+206,"L316","Rue Vallée 15, 4681 Hermalle-sous-Argenteau",50.714097,5.680433,NA
+207,"L318","Zum Kuhnenbrunnen 17, 4780 Recht",50.335154,6.045442,NA
+208,"L320","Bergscheid 5, 4730 Raeren",50.673269,6.115422,NA
+209,"L323","Chapelle des Anges 68A, 4890 Froidthier",50.678197,5.859668,NA
+210,"L326","Rue de la Fagne 12, 4845 Jalhay",50.558992,5.97019,NA
+211,"L328","Quai des Vieux Moulins, 4970 Stavelot",50.39355,5.933464,"Street-level match only — no house number found"
+212,"L329","Rue de la Coulée 24, 4983 Basse-Bodeux",50.358293,5.82567,NA
+213,"L333","Rue Baron d'Obin 219, 4219 Wasseiges",50.623796,5.001048,NA
+214,"L335","Rue Mignolet 78a, 4300 Bovenistier",50.668474,5.284169,NA
+215,"L337","Ruelle des Capucins 2, 4960 Malmedy",50.424502,6.030603,NA
+216,"L338","Allée des Erables 14, 4601 Sarolay",50.696947,5.683996,NA
+217,"L344","Ruelle de la Kan, 4880 Aubel",50.705067,5.861612,"Street-level match only — no house number found"
+218,"L348","Lagerstrasse 36, 4750 Elsenborn",50.462638,6.211355,NA
+219,"L349","Rue de la Salle 1, 4960 Malmedy",50.410661,6.055543,NA
+220,"L351","Rue de la Loignerie 19, 4050 Ninane",50.579313,5.637811,NA
+221,"L355","Rue du Tige 142, 4450 Juprelle",50.709238,5.531114,NA
+222,"L357","Place du Wirhet 1, 4653 Bolland",50.661767,5.758488,NA
+223,"L358","Rue Jean Stassart 21, 4367 Crisnée",50.708168,5.390187,NA
+224,"L360","Rue Xhavée, 4800 Verviers",50.590737,5.860252,"Matched to nearby swimming pool entrance on Rue Xhavée"
+225,"L365","Rue Onu 8, 4210 Burdinne",50.582972,5.070931,NA
+226,"L368","Rue Léonard Moray 15, 4837 Membach",50.619844,5.995415,NA
+227,"L370","Rue des Botresses 2, 4420 Montegnee",50.642033,5.519544,NA
+228,"L374","Chaussée de Tongres 235, 4540 Amay",50.556079,5.30528,NA
+229,"L377","Rue Haute 65, 4690 Eben-Emael",50.789026,5.664744,NA
+230,"L378","Rue Jean Simon Renier 41, 4800 Verviers",50.596726,5.867145,"Rue Jean Simon Renier not found — matched to Rue Renier 41, Verviers (likely same street)"
+231,"L382","Avenue Amédée Hesse 41A, 4900 Spa",50.497189,5.885445,NA
+232,"L383","Grand'Rue 186, 4870 Trooz",50.576077,5.684109,NA
+233,"L384","Rue du Heusay 19, 4610 Beyne-Heusay",50.623646,5.654255,NA
+234,"L387","Rue Jules Beaumont 1, 4400 Flemalle (Awirs)",50.599281,5.410227,NA
+235,"L389","Avenue Jardin Ecole 82, 4820 Dison",50.606397,5.847927,NA
+236,"L390","Avenue de la Gare 207, 4460 Bierset",50.653249,5.448114,NA
+237,"L391","Rue Lambert Marlet 13, 4670 Blegny",50.684082,5.722324,NA
+238,"L393","Rue des Tombes 30/5, 4520 Antheit",50.551432,5.226932,NA
+239,"L396","Place du Marché 9, 4621 Retinne",50.63449,5.702429,"Duplicate of #204 (L312) — same address"
+240,"L397","Rue le Brouc 5, 1357 Hélécine",50.756905,4.989535,NA
+241,"L398","Boulevard des Combattants 69, 4470 Stockay",50.585782,5.360583,NA
+242,"L399","Avenue Jardin Ecole 82, 4820 Dison",50.606397,5.847927,NA
+243,"L400","Rue Géo Warzée 19, 4520 Wanze",50.53715,5.221916,NA
+244,"L401","Rue de Berloz 4, 4000 Sclessin",50.608245,5.551739,NA
+245,"L402","Boulevard des Arts 195, 4102 Ougree",50.588185,5.541128,NA
+246,"L403","Rue de la Coulée 24, 4983 Basse-Bodeux",50.358293,5.82567,NA
+247,"LK006","Opitterkiezel 240, 3960 Bree",51.117584,5.644728,NA
+248,"LK007","Kolisboomstraat, 3960 Bree",51.140032,5.581279,"Street-level match only — no house number found"
+249,"LK009","Caimolaan, 3970 Leopoldsburg",51.118837,5.251208,"Street-level match only — no house number found"
+250,"LK010","Koningsplein 15A, 3530 Houthalen",51.061752,5.41116,NA
+251,"LK012","Smeelstraat 1, 3910 Sint-Huibrechts-Lille",51.224162,5.482908,NA
+252,"LK016","P. Van Mierolaan 17, 3550 Heusden-Zolder",51.030666,5.279552,NA
+253,"LK017","Voorshoventerweg 58A, 3680 Neeroeteren",51.107092,5.696684,NA
+254,"LK024","Albertlaan 16-18, 3200 Aarschot",50.984317,4.828817,NA
+255,"LK026","Sint-Rochuslaan 12, 3840 Borgloon",50.801866,5.354646,NA
+256,"LK031","Keelhoffstraat 8, 3620 Neerharen-Lanaken",50.908828,5.686371,NA
+257,"LK033","Schuttenbergstraat 2B1, 3665 As",51.007533,5.595874,NA
+258,"LK036","Sportveldenstraat 10, 3920 Lommel",51.245002,5.305732,NA
+259,"LK037","Rotemerlaan 34, 3680 Neeroeteren",51.083096,5.702995,NA
+260,"LK049","Zolderse Kiezel 86, 3511 Hasselt-Kuringen",50.952916,5.274053,NA
+261,"LK051","Sint-Lambrechts-Herkstraat 69, 3500 Hasselt",50.906762,5.304599,NA
+262,"LK052","Manestraat 82/3, 3540 Herk-de-Stad",50.950718,5.191674,NA
+263,"LK054","Leeuwerikstraat 6, 3930 Hamont-Achel",51.233921,5.538867,NA
+264,"LK056","Kiezelweg 73, 2400 Mol",51.21479,5.188539,NA
+265,"LK058","Weg naar Opoeteren 172, 3660 Opglabbeek",51.050561,5.607262,NA
+266,"LK060","Kalvariebergstraat 78, 2440 Oosterlo",51.103167,4.966323,NA
+267,"LK061","Parkstraat 40, 3583 Beringen-Paal",51.042558,5.171844,NA
+268,"LK068","Snijderstraat 12, 3740 Bilzen-Hoeselt",50.847855,5.576366,NA
+269,"LK076","Weg naar Ellikom 243, 3670 Meeuwen-Ellikom",51.129168,5.524123,NA
+270,"LK084","Vossenbergstraat 52A, 3500 Hasselt",50.945271,5.396853,NA
+271,"LK085","Sint-Jorisstraat 11, 3631 Maasmechelen (Boorsem)",50.941399,5.718545,NA
+272,"LK086","Groenstraat 20, 3650 Dilsen-Stokkem",51.012323,5.720172,NA
+273,"LK087","Mathijsplein 2, 3950 Bocholt",51.172268,5.576061,NA
+274,"LK089","Dennenstraat 8, 3941 Eksel",51.154431,5.377016,NA
+275,"LK092","Jodenstraat, 3800 Sint-Truiden",50.81458,5.192327,"Street-level match only — no house number found"
+276,"LK100","Rijdreef 30, 3570 Alken",50.872888,5.313286,NA
+277,"LK103","Hemeldreef 20, 3730 Bilzen-Hoeselt",50.855855,5.481959,NA
+278,"LK105","Sint-Amandusstraat 30, 3511 Stokrooie",50.966361,5.278391,NA
+279,"LK109","Holenweg 2, 3910 Neerpelt",51.238147,5.457457,NA
+280,"LK110","Truyenstraat 20c, 3640 Kinrooi-Molenbeersel",51.173359,5.738673,NA
+281,"LK115","Albertus Morrenstraat 6, 3990 Peer",51.135352,5.463905,NA
+282,"Lx001","Cour Marchal 8A, 6760 Virton",49.565993,5.537976,NA
+283,"Lx003","Rue de la Gare, 6680 Sainte-Ode",50.02979,5.54041,"Street-level match only — no house number found; coordinates approximate Sainte-Ode locality"
+284,"Lx005","Rue des Ecoles 4, 6900 Marloie",50.201084,5.317243,NA
+285,"Lx006","Rue de France 31, 6750 Musson",49.555948,5.693272,NA
+286,"Lx007","Chemin de la Salle 3, 6960 Manhay",50.293447,5.67521,NA
+287,"Lx008","Rue Les Grands Prés 2A, 6953 Masbourg",50.113861,5.311346,NA
+288,"Lx011","Rue de Viville 6, 6700 Arlon",49.689407,5.806492,NA
+289,"Lx012",NA,NA,NA,"Address listed as NA — omitted"
+290,"Lx013","Rue du Cimetière 1, 6953 Ambly",50.141622,5.312855,NA
+291,"Lx014","Porte de Trèves, 6600 Bastogne",50.004954,5.722057,NA
+292,"Lx022","Rue des Ecoles 868 (Bourcy), 6600 Bastogne",50.001759,5.715091,"Rue des Ecoles 868 not found precisely — coordinates approximate Bastogne/Bourcy area; verify manually"
+293,"Lx025","Rue de l'Institut 15, 6780 Differt",49.612312,5.809639,NA
+294,"Lx026","Rue Saint-Amand 43, 6720 Hachy",49.70345,5.680735,NA
+295,"Lx028","Rue des Roses 2, 6781 Selange",49.608548,5.848741,NA
+296,"Lx034","Rue du Haut-des-Bruyères 26, 6860 Leglise",49.804052,5.532541,NA
+297,"Lx035","Rue du Cèdre 37, 6800 Libramont",49.925124,5.385205,NA
+298,"Lx037","Rue de la Station 4, 6900 Marloie",50.201045,5.315382,NA
+299,"Lx039","Rue du Faing 16, 6810 Jamoigne",49.693526,5.406734,NA
+300,"Lx042","Place des Chasseurs Ardennais, 6690 Vielsalm",50.289494,5.903325,"Street-level match only — no house number found"
+301,"Lx044","Les Rouges Eaux 6, 6887 Gribomont (St-Médard)",49.820922,5.325113,NA
+302,"Lx045","Rue des Acins 14 (Longchamps), 6687 Bertogne",50.054562,5.695029,NA
+303,"Lx052","Rue du Parc 21, 6870 Saint-Hubert",50.029326,5.381343,NA
+304,"Lx053","Rue de l'Ange Gardien 5, 6830 Bouillon",49.79619,5.072149,NA
+305,"Lx054","Route Saint-Quoilin 50, 6971 Champlon",50.100398,5.506389,NA
+306,"Lx055","Rue de Radelange 43D, 6630 Martelange",49.832052,5.729398,NA
+307,"Lx058","Rue de Mochamps, 6800 Bras-Haut",49.983338,5.379814,"Street-level match only — no house number found"
+308,"Lx059","Grand-Rue 108, 6780 Messancy",49.595307,5.813954,NA
+309,"Lx065","Rue du Stade 1, 6747 Saint-Léger",49.606315,5.653608,NA
+310,"Lx068","Joubiéval 17A, 6690 Vielsalm",50.262545,5.847919,NA
+311,"Lx069","Rue de Gérouville 69A, 6769 Meix-Devant-Virton",49.605648,5.472258,NA
+312,"Lx071","Langlire 25A, 6674 Gouvy",50.230925,5.843749,NA
+313,"Lx074","Rue Saint Maximin, 6724 Rulles",49.717021,5.560137,"Street-level match only — no house number found"
+314,"Lx075","Rue des Sports 36, 6670 Gouvy",50.195599,5.955382,NA
+315,"Lx076","Dinez 68, 6661 Houffalize",50.168745,5.769774,NA
+316,"Lx081","Rue du Noyer, 6990 Melreux",50.277907,5.437896,"Street-level match only — no house number found"
+317,"Lx085","Rue du Stoqueux 2, 6660 Houffalize",50.128225,5.7827,NA
+318,"Lx088","Rue du Seigneur, 6856 Fays-les-Veneurs",49.865346,5.162258,"Street-level match only — no house number found"
+319,"Lx089","Rue de Bertrix 47, 6890 Ochamps",49.91349,5.276569,NA
+320,"Lx092","Rue Sculpteur Vincotte 14, 6698 Grand-Halleux",50.326171,5.909004,NA
+321,"Lx093","Rue de La Roche 22, 6987 Rendeux",50.230234,5.517114,NA
+322,"Lx094","Au Classin, 6674 Montleban",50.190974,5.840316,NA
+323,"Lx097","Rue des Sarts, 6900 Aye",50.226226,5.292135,"Street-level match only — no house number found"
+324,"Lx099","Rue Léon Henrard 16, 5550 Alle-sur-Semois",49.846319,4.974395,NA
+325,"Lx100","Rue de Dochamps, 6987 Devantave",50.23937,5.560831,"Street-level match only — no house number found"
+326,"Lx103","Rue du Flochai 2, 6980 Beausaint",50.170152,5.554288,NA
+327,"Lx107","Rue Strya 2, 6941 Villers-Ste-Gertrude",50.361052,5.5781,NA
+328,"Lx108","Prés d'Auby 14, 6800 Saint-Pierre",49.903419,5.387486,NA
+329,"Lx110","Rue Croix Le Maire 16, 6760 Virton",49.567566,5.528327,NA
+330,"Lx111","Chemin de la Salle, 6960 Manhay",50.293447,5.67521,"Street-level match only — no house number found"
+331,"Lx112","Rue des Alliés 44, 6953 Forrières",50.133025,5.284053,NA
+332,"Lx115","Rue du Progrès 38, 5555 Graide-Station",49.937334,5.046955,"Matched via Graide train station area — verify manually"
+333,"Lx116","Rue Pâchis Lamkin, 6920 Wellin",50.081809,5.121049,"Street-level match only — no house number found"
+334,"Lx117","Chemin des Lauriers 1, 6640 Morhet (Vaux-sur-Sûre)",49.944388,5.599051,NA
+335,"Lx118","Rue du Beynert 15, 6700 Arlon",49.697507,5.768241,NA
+336,"Lx120","Um Bruch, 6717 Tontelange",49.721778,5.799474,"Street-level match only — no house number found"
+337,"Lx123","Avenue Adam 9, 6767 Harnoncourt",49.536261,5.496572,NA
+338,"N021","Rue Saint-Donat 56, 5002 Saint-Servais",50.473587,4.852019,NA
+339,"N023","Rue Arthur Defoin 215, 5500 Anseremme",50.24148,4.920268,NA
+340,"N025","Rue Vigneron 23, 5060 Falisolle",50.418459,4.62309,NA
+341,"N027","Rue de Falisolle 73, 5060 Sambreville",50.444112,4.632453,NA
+342,"N028","Rue Jennay 108, 5032 Isnes",50.509474,4.738709,NA
+343,"N034","Rue Saint-Martin 21, 5190 Jemeppe-sur-Sambre",50.464996,4.656246,NA
+344,"N036","Rue Saint-Martin, 5190 Jemeppe-sur-Sambre",50.464996,4.656246,"Street-level match only — same street as N034 (#343); identical coordinates used"
+345,"N037","Rue des Ecoles 2A, 5300 Seilles",50.500704,5.080628,NA
+346,"N041","Rue des Etourneaux, 5004 Bouge",50.484213,4.880736,"Street-level match only — no house number found"
+347,"N045","Rue de Fleurus 2, 5030 Gembloux (Sauvenière)",50.581626,4.715375,NA
+348,"N047","Rue de Walcourt 127, 5070 Vitrival",50.385352,4.631037,NA
+349,"N048","Rue du Trèfle 2, 5100 Jambes",50.450299,4.886974,NA
+350,"N051","Rue Fond de Bouge 43, 5020 Vedrin",50.486044,4.880877,NA
+351,"N052","Rue de la Fabrique 4B, 5190 Moustier-sur-Sambre",50.457784,4.692336,NA
+352,"N055","Sentier de l'Ermite, 5620 Rosée",50.232119,4.683733,NA
+353,"N068","Rue de l'Eglise 25a, 5537 Annevoie-Rouillon",50.342408,4.840899,NA
+354,"N069","Rue du Moulin 164, 5600 Philippeville",50.194145,4.538889,NA
+355,"N073","Clos de l'Ermitage, 5590 Ciney",50.28992,5.09597,NA
+356,"N074","Rue des Clos Fleuris 17, 5570 Beauraing",50.111842,4.948533,NA
+357,"N076","Rue Amérique 23, 5651 Somzée",50.293653,4.488525,NA
+358,"N078","Rue d'Eparmar 11, 5000 Beez",50.468638,4.91918,NA
+359,"N079","Rue de Namêche 8, 5310 Leuze (Eghezee)",50.479139,4.972772,NA
+360,"N080","Rue Saint-Roch, 5650 Chastres",50.26504,4.459808,"Street-level match only — no house number found"
+361,"N081","Rue de la Forge 5, 5630 Silenrieux",50.223978,4.411072,NA
+362,"N083","Rue Romedenne 33, 5150 Floreffe",50.438348,4.758887,NA
+363,"N088","Rue Saint-Joseph 34, 5660 Frasnes",50.07804,4.506707,NA
+364,"N092","Rue de la Station, 5670 Nismes",50.082523,4.554667,"Street-level match only — no house number found"
+365,"N093","Rue du Centre, 5170 Lesve (Profondeville)",50.370654,4.76876,"Street-level match only — no house number found"
+366,"N094","Rue d'Ocolna 1, 5370 Havelange",50.386085,5.24247,NA
+367,"N100","Place des Sports 2, 5100 Andoy",50.435167,4.928863,"Matched via CTT Andoy sports club (Rue Grande 102) — Place des Sports not directly found"
+368,"N101","Sentier de l'Ermite, 5620 Rosée",50.232119,4.683733,"Duplicate of #352 (N055) — same location"
+369,"N102","Rue de la Colline 2A, 5000 Namur",50.462733,4.845317,NA
+370,"N103","Chaussée de la Gare 2A, 5080 Rhisnes",50.499112,4.802775,NA
+371,"N104","Champ-Ha, 5020 Malonne",50.421181,4.798343,NA
+372,"N112","Rue du Parc de Saint-Marc 16, 5003 Saint-Marc",50.489558,4.844929,NA
+373,"N114","Place des Combattants 11, 5660 Gonrieux",50.035421,4.425805,NA
+374,"N115","Rue de la Saboterie 3, 5660 Presgaux",50.026739,4.418982,NA
+375,"N118","Try Saint-Pierre 7, 5170 Profondeville",50.374125,4.872967,NA
+376,"N119","Rue de la Croix Rouge 11, 5032 Bossière",50.520418,4.702033,NA
+377,"N120","Comognes de Loyers, 5101 Loyers",50.454789,4.957855,NA
+378,"N126","Rue du Monastère 3, 5644 Ermeton-sur-Biert",50.299014,4.709837,NA
+379,"N130","Place Notre-Dame de la Paix 5, 5101 Erpent",50.439291,4.896417,NA
+380,"N131","Rue Sauvegarde 19A, 5530 Evrehailles",50.320696,4.912813,NA
+381,"N136","Rue de Velaine 169, 5060 Tamines",50.452851,4.604918,NA
+382,"N140","Rue du Centre, 5170 Lesve",50.370654,4.76876,"Street-level match only — no house number found; same street as N093 (#365)"
+383,"N146","Rue Rogier 80, 5300 Andenne",50.466875,4.870061,NA
+384,"N147","Rue Joseph Bouché 23B, 5310 Bolinne-Harlue",50.606969,4.918379,NA
+385,"N149","Rue de Nalamont 139B, 5351 Haillot",50.444255,5.144166,NA
+386,"N151","Rue de Vodelée, 5600 Romedenne",50.172209,4.706026,"Street-level match only — no house number found"
+387,"N152","Rue de Le Mesnil 6, 5670 Oignies",50.023947,4.640719,NA
+388,"N153","Rue du Pirou 8, 5140 Ligny",50.510802,4.575659,NA
+389,"N156","Rue des Écoles 17, 5530 Purnode",50.314312,4.944762,NA
+390,"N158","Rue des Ecoles 3, 5080 Villers-lez-Heest",50.529715,4.843908,NA
+391,"N159","Rue de Branchon 114, 5380 Seron-Forville",50.5853,5.002269,NA
+392,"N160","Chaussée de Dinant 34, 5530 Spontin",50.322238,5.004133,NA
+393,"N163","Rue Visart de Bocarmé 30, 5020 Temploux",50.486976,4.747566,NA
+394,"N170","Rue de l'Abbaye, 5000 Namur",50.466499,4.837787,"Street-level match only — no house number found"
+395,"N175","Rue Croix de Bourgogne 12, 5640 Mettet",50.322214,4.660982,NA
+396,"N176","Chaussée de Gramptinne 112, 5340 Gesves",50.405699,5.06658,NA
+397,"N178","Rue du Centre 63, 5530 Mont-Godinne",50.353173,4.904107,NA
+398,"N180","Rue de Fairoul 1, 5650 Fraire",50.259964,4.507904,NA
+399,"N182","Rue de la Morie 18, 5575 Gedinne",49.98304,4.935847,NA
+400,"N186","Place du Sablon, 5030 Sauvenière",50.58094,4.726259,NA
+401,"N188","Rue Morimont, 5330 Sart-Bernard",50.402644,4.943527,"Street-level match only — no house number found"
+402,"N193","Rue Saint-Pierre 57, 5630 Villers-Deux-Eglises",50.18972,4.482627,NA
+403,"N195","Cheraivoie 6, 5670 Olloy-sur-Viroin",50.074026,4.607855,NA
+404,"N197","Rue Goffin 113A, 5620 Saint-Aubin",50.247124,4.576292,NA
+405,"N201","Rue de Morialmé 10B, 5621 Thy-le-Bauduin",50.293702,4.525054,NA
+406,"N205","Rue du Bois 5, 5660 Petite-Chapelle",49.951796,4.509646,NA
+407,"N207","Rue de la Gare, 5590 Leignon",50.266905,5.108497,"Street-level match only — no house number found"
+408,"N210","Rue Camille Charlier 11A, 5020 Flawinne",50.461168,4.808527,NA
+409,"N211","Plaine Recrear 2, 5540 Hastière-Lavaux",50.21471,4.823645,NA
+410,"N215","Courte Rue 6, 5670 Treignes",50.092199,4.66859,NA
+411,"N216","Rue Martin Sandron 114, 5680 Doische",50.136016,4.744918,NA
+412,"N217","Rue Visart de Bocarmé, 5020 Temploux",50.489595,4.746602,"Street-level match only — no house number found"
+413,"N218","Route de Floreffe 26, 5170 Burnot",50.361908,4.8583,NA
+414,"N219","Place Sainte-Geneviève, 5600 Vodecée",50.197221,4.591626,"Street-level match only — no house number found"
+415,"N220","Rue de la Gendarmerie 6A, 5670 Vierves-sur-Viroin",50.081528,4.633789,NA
+416,"N221","Rue Visart de Bocarmé 30, 5020 Temploux",50.486976,4.747566,NA
+417,"OVL001","Johannes Hartmannlaan 4, 9040 Sint-Amandsberg",51.057069,3.752164,NA
+418,"OVL012","Sompelplein 39B, 9700 Oudenaarde",50.829915,3.608,NA
+419,"OVL018","Brugsesteenweg 183, 9900 Eeklo",51.19447,3.54044,NA
+420,"OVL020","Lange Minnestraat 63, 9280 Lebbeke",50.983818,4.144601,NA
+421,"OVL032","Plataan 2, 9820 Merelbeke",51.006195,3.75086,NA
+422,"OVL039","Nijverheidsstraat 29, 9100 Sint-Niklaas",51.169324,4.135271,NA
+423,"OVL047","Nieuwstraat 3, 9800 Deinze",50.983213,3.560831,NA
+424,"OVL052","Leuzesesteenweg 241, 9600 Ronse",50.734961,3.589231,NA
+425,"OVL053","Droogte 208, 9940 Evergem (Wippelgem)",51.135684,3.727633,NA
+426,"OVL054","Felicien Cauwelstraat 39, 9500 Geraardsbergen",50.775913,3.869479,NA
+427,"OVL056","Eeckhoutdriesstraat 157, 9140 Temse",51.129945,4.207493,NA
+428,"OVL059","Bloemestraat 36, 9990 Maldegem",51.21274,3.451764,NA
+429,"OVL061","Sportstraat 5, 9860 Scheldewindeke",50.940805,3.794714,NA
+430,"OVL082","Bourgondiëstraat 6, 9700 Oudenaarde",50.842835,3.610779,NA
+431,"OVL088","Rooigemlaan 180, 9000 Gent",51.058168,3.693324,NA
+432,"OVL092","Zwembadstraat 7, 9620 Zottegem",50.868167,3.828201,NA
+433,"OVL093","Van Nature Actieflaan 7, 9190 Stekene",51.204869,4.048098,NA
+434,"OVL095","Polderbos 20, 9840 De Pinte",50.991062,3.644741,NA
+435,"OVL096","Cesar De Golspark 6, 9220 Hamme",51.093258,4.156319,NA
+436,"OVL101","Ambachtstraat 7, 9150 Kruibeke",51.172051,4.311993,NA
+437,"OVL102","Leegstraat 19, 9960 Assenede",51.229271,3.748726,NA
+438,"OVL103","Wegvoeringsstraat 21, 9230 Wetteren",51.007673,3.887544,NA
+439,"OVL106","Vekenstraat 1-3, 9255 Buggenhout-Opdorp",51.030231,4.217717,NA
+440,"OVL107","Koning Boudewijnlaan 4, 9080 Lochristi",51.097251,3.828486,NA
+441,"OVL115","Hofbouwstraat 2, 9930 Zomergem",51.119991,3.561524,NA
+442,"OVL119","Kloosterstraat 18, 9750 Kruisem",50.901026,3.58861,NA
+443,"OVL125","Zandstraat 16, 9170 Sint-Pauwels",51.194344,4.094279,NA
+444,"OVL134","Cesar Haeltermanstraat 71, 9300 Aalst",50.945605,4.025697,NA
+445,"OVL138","Kerkstraat 36, 9870 Zulte (Olsene)",50.93743,3.460901,NA
+446,"OVL142","Koevliet 1, 9240 Zele",51.065205,4.026788,NA
+447,"OVL145","Walleken 12, 9470 Denderleeuw",50.883061,4.066852,NA
+448,"OVL146","Aaigemdorp 66, 9420 Aaigem",50.890684,3.936928,NA
+449,"OVL148","Felicien Cauwelstraat 39, 9500 Geraardsbergen",50.775913,3.869479,"Duplicate of OVL054 (#426) — same address"
+450,"OVL149","Jagerstraat 64, 9660 Brakel",50.803711,3.753009,NA
+451,"Vl-B005","Remi Vandervaerenlaan 16, 3000 Leuven",50.873493,4.692759,NA
+452,"Vl-B161","Doornlarenhoofdstraat, 1640 Sint-Genesius-Rode",50.743432,4.351278,"Street-level match only — no house number found"
+453,"Vl-B182","Jozef Mertensstraat 27, 1702 Groot-Bijgaarden",50.872373,4.259432,NA
+454,"Vl-B213","Nachtegaallaan 5, 1851 Humbeek",50.970583,4.38823,NA
+455,"Vl-B218","Nijverheidsstraat 115a, 1800 Vilvoorde",50.930525,4.435615,NA
+456,"Vl-B225","Dijck 34, 1780 Wemmel",50.900376,4.304747,NA
+457,"Vl-B234","Dekenstraat 3, 3000 Leuven",50.874406,4.708178,NA
+458,"Vl-B247","Marktplein 19, 1570 Galmaarden",50.754229,3.971628,NA
+459,"Vl-B248","Vondel 41, 1500 Halle",50.7359,4.239776,NA
+460,"Vl-B256","Waversesteenweg 96, 3090 Overijse",50.771612,4.542748,NA
+461,"Vl-B283","Bekaflaan 62, 3200 Aarschot",50.987173,4.847398,NA
+462,"Vl-B293","Grauwzustersstraat 10, 3290 Diest",50.987127,5.058556,NA
+463,"Vl-B295","Nieuwebaan 8, 3118 Werchter",50.972436,4.703756,NA
+464,"Vl-B318","Kerkplein, 3212 Pellenberg-Lubbeek",50.870768,4.794139,"Street-level match only — no house number found"
+465,"Vl-B330","Sporthalstraat 1, 3300 Tienen",50.819401,4.945224,NA
+466,"Vl-B331","Diestsesteenweg 288B, 3010 Leuven (Kessel-Lo)",50.88457,4.731363,NA
+467,"Vl-B334","Wijngaardstraat 1, 3070 Kortenberg",50.883818,4.548077,NA
+468,"Vl-B336","Speelpleinstraat 10, 3360 Bierbeek",50.827297,4.753517,NA
+469,"WVL034","Dronckaertstraat, 8930 Lauwe",50.78715,3.19539,"Street-level match only — no house number found"
+470,"WVL040","Otegemstraat 238/4, 8550 Zwevegem",50.815938,3.352311,NA
+471,"WVL045","Sportparklaan 6, 8400 Oostende",51.202811,2.923394,NA
+472,"WVL060","Zeevillalaan 48, 8420 Wenduine",51.298173,3.079544,NA
+473,"WVL067","Bollewerpstraat 92, 8770 Ingelmunster",50.922235,3.262078,NA
+474,"WVL071","Dudenhofenlaan 2B, 8620 Nieuwpoort",51.132384,2.740814,NA
+475,"WVL072","Nieuwenhuyse 49, 8520 Kuurne",50.853386,3.271867,NA
+476,"WVL085","Schoolstraat 6, 8670 Oostduinkerke",51.116816,2.684637,NA
+477,"WVL087","Magdalenastraat 30, 8200 Sint-Andries",51.201106,3.210856,NA
+478,"WVL094","Hernieuwenstraat 14, 8710 Wielsbeke",50.911515,3.37433,NA
+479,"WVL100","Jonkershovestraat 103, 8650 Houthulst",50.97243,2.931168,NA
+480,"WVL104","Spuikomlaan 21, 8450 Bredene",51.231656,2.964395,NA
+481,"WVL105","Vlamingveld 40, 8490 Jabbeke",51.182726,3.102193,NA
+482,"WVL109","Boterbloemstraat 29, 8400 Oostende",51.202106,2.978492,NA
+483,"WVL110","Peperstraat 10B, 8560 Gullegem",50.843241,3.206715,NA
+484,"WVL114","Bekestraat 16, 8460 Oudenburg",51.182152,3.008836,NA
+485,"WVL116","Renaat De Rudderlaan 6, 8500 Kortrijk",50.821448,3.285818,NA
+486,"WVL125","Belhuttebaan 40, 8680 Koekelare",51.086238,2.982819,NA
+487,"WVL126","Sportlaan 1, 8700 Tielt",51.00301,3.32866,NA
+488,"WVL129","Leopold III laan 18, 8900 Ieper",50.845149,2.895434,NA
+489,"WVL134","Elbestraat 34, 8760 Meulebeke",50.959087,3.272283,NA
+490,"WVL137","Edward Verheyestraat 14, 8300 Knokke-Heist",51.339841,3.290592,NA
+491,"WVL138","Industrielaan 2, 8820 Torhout",51.07154,3.103071,NA
+492,"WVL139","A.Rodenbachstraat 42, 8020 Oostkamp",51.156574,3.244812,NA
+493,"WVL143","Dalestraat 40, 8554 Sint-Denijs",50.749994,3.364411,NA
+494,"WVL152","Groenestraat 267, 8800 Roeselare",50.94097,3.106294,NA
+495,"WVL154","Geluwestraat 36, 8980 Zonnebeke (Beselare)",50.847047,3.026902,NA
+496,"WVL158","Eikelberg 3, 8340 Sijsele",51.214438,3.310185,NA
+497,"WVL159","Peperstraat 2, 8560 Gullegem",50.843691,3.205023,NA
+498,"WVL163","Beernemstraat 23, 8750 Wingene",51.061169,3.273904,NA
+499,"WVL164","Koolskampstraat 24, 8830 Hooglede-Gits",50.996735,3.126772,NA
+500,"L999","Rue Lambert Marlet 13, 4670 Blegny",50.684082,5.722324,NA
+501,"N222","Rue des Chasseurs Ardennais, 5377 Noiseux",50.291614,5.373966,"Street-level match only — no house number found"
+502,"H455","Rue de Presles 83A, 6280 Villers-Poterie",50.35498,4.549564,NA
+503,"H124","Rue de la Marlière 251, 7700 Mouscron",50.738569,3.198135,NA
+504,"H456","Rue Puissant d'Agimont 35, 6040 Jumet",50.438445,4.435553,NA
+505,"H457","Rue de l'Avenir 2, 7160 Piéton",50.439047,4.298322,NA
+506,"L404","Rue de Lognoul 1A, 4190 Ferrières",50.400418,5.607342,NA
+507,"Vl-B341","Viaductstraat 82A, 1050 Elsene",50.833937,4.371225,"Matched as French Rue du Viaduc 82A (Ixelles/Elsene)"
+508,"H352","Rue des Gourgues 9, 7608 Wiers",50.508883,3.532105,NA
+509,"L405","Rue Albert Leclercq 35, 4652 Herve",50.604255,5.772517,NA
+510,"H458","Rue Paul Janson 4, 6182 Souvret",50.45067,4.347841,NA
+511,"H999","Avenue Eugène Mascaux 486, 6001 Marcinelle",50.387731,4.432983,NA
+512,"H356","Avenue de l'Europe 8, 7350 Hensies",50.435077,3.687048,NA
+513,"L406","Rue des Chapeliers 2, 4800 Verviers",50.584612,5.838818,NA
+514,"N223","Rue de Vérenne 2, 5377 Waillet",50.267717,5.294646,"Approximated from nearby Rue de Vérenne in Somme-Leuze municipality"

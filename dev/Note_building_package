@@ -1,0 +1,45 @@
+Notes about making the pkg.
+
+I. structure the directory:
+- dev       folder contains ongoing non cleaned code and other
+- inst      folder is for the app or external data that should come with pkg but no running
+- data-raw is external data and R scripts that build data for use in data folder (dta)
+- data      contaisn .dta files
+- vignettes contains example of how to use
+- R         all the functions (not the scripts used to make data). Make sure all functions have a Roxygen style description
+
+II. Adding files:
+- add a DESCRIPTION file
+- add a LICENCE (authorship) file because I point to one in the description
+- add a .Rbuildignore to disconsider /dev, readme, rproj or current data and history when building the pkg
+
+III. Make project a pkg in Rstudio
+Reset project as a package in Project options - build tools.
+
+IV. Generate document files
+run devtools::document(). This creates
+ - a /man folder
+ - a NAMESPACE file NOT TO BE EDITED BY HAND
+ + Roxygen scans all R/*.Rfiles
+ + Roxygen updates its version in DESCRIPTION
+ + Rd files are created within /man for having the functions in the help
+ 
+V. Verify files
+run devtools::check()
+Note: warnings and corrections. NB: run devtools::load_all() when a change is done
+- time stamps not verified (this is because my folder is in a synchorinising folder (dropbox) no problem)
+- rproj readme html or data-raw not used by R but OK to keep for me
+- add the project dependencies that were missing in DESCRIPTION under Imports and redo devtools::document and check
+- no visible binding for datasets used in functions > adds a "globals.R" file in R to indicate global variables that could be used 
+- LazyData put to false in DSECRIPTION because some data is large (8Mb)
+- add Vignette builder and suggests knitr and mdwown in DESCRIPTION oitherwise vignettes are not compiled. As Cran does not want htmpl of vignettes. use: devtools::build_vignettes() once done before check
+ NB: This creates the /doc folder and vignettes within
+- solved issues with data loaded by functiuons only called within functions
+- Note a Meta folder can be created due to checking not to be used in built so it is added automatically in Rbuiltignore and shoud be in gitignore as well
+
+VI Build
+devtools::build() creates a tar.gz version of the pkg but if installed from git source, it is actually made again temprarily. So this is only for CRAN or sharing manually. The pkg itself is the foler with the requred elements.
+
+
+ 
+ 

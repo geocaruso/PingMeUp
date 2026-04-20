@@ -1,0 +1,27 @@
+Package: PingMeUp
+Title: Tools for Exploring AFTT Table Tennis Data
+Version: 0.1.0
+Authors@R: 
+    person("Geoffrey", "Caruso", 
+           email = "geoffrey.caruso@uni.lu", 
+           role = c("aut", "cre"))
+Description: Provides tools to scrape, clean, analyse and map table 
+    tennis data from the AFTT website. The package is developed for 
+    methodological exploration, teaching reproducible workflows to 
+    geography students, and supporting club- or federation-level 
+    analysis of points, rankings, performance and geographic patterns. 
+    This is an independent, non-official project; for official data 
+    and rankings, refer to the AFTT Data Portal.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: false
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+VignetteBuilder: knitr
+Suggests: knitr, rmarkdown
+Imports:
+    httr,
+    jsonlite,
+    rvest,
+    stringr
+

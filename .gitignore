@@ -1,0 +1,20 @@
+# RStudio
+.Rproj.user
+.Rhistory
+.RData
+
+# Build artifacts
+*.tar.gz
+*.tgz
+*.zip
+Meta/
+doc/
+inst/doc/
+
+# Vignette outputs
+vignettes/*.html
+vignettes/*.pdf
+
+# README artifacts
+README.html
+README_files/
