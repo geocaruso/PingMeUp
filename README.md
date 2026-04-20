@@ -59,7 +59,7 @@ head(players_m[order(players_m$points, decreasing=TRUE), c("nom","points")], 50)
 Namur_players_m <-players_m[players_m$prov=="N",]
 head(Namur_players_m[order(Namur_players_m$points, decreasing=TRUE), c("nom","points")], 20)
 ```
-See the Vignettes for more use and analytics
+See the Vignettes for more use and analytics (plots, etc.)
 
 ### Compute your classement from points app
 

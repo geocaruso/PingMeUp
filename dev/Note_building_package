@@ -41,5 +41,9 @@ VI Build
 devtools::build() creates a tar.gz version of the pkg but if installed from git source, it is actually made again temprarily. So this is only for CRAN or sharing manually. The pkg itself is the foler with the requred elements.
 
 
- 
+VII Adding GIT
+git init
+git add .
+git commit -m "Initial commit of PingMeUp package"
+
  
