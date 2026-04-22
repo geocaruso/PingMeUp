@@ -2,7 +2,7 @@
 % Please edit documentation in R/share.m.B2toNC.R
 \name{share.m.B2toNC}
 \alias{share.m.B2toNC}
-\title{Computes average cumulated percentage by classement from a classement grille so that classement can be computed for any number of number of actifs}
+\title{Computes the average cumulated percentage by classement from the AFTT classement grille so that classement can be computed for any number of actifs}
 \usage{
 share.m.B2toNC(grille = NULL)
 }
@@ -13,7 +13,7 @@ share.m.B2toNC(grille = NULL)
 named vector from B2 to NC and their cumulated share of players. When restimated to known values of the official grid, error is in the margin of 5 ranks (see example)
 }
 \description{
-Computes average cumulated percentage by classement from a classement grille so that classement can be computed for any number of number of actifs
+Computes the average cumulated percentage by classement from the AFTT classement grille so that classement can be computed for any number of actifs
 }
 \examples{
 share.m.B2toNC()
