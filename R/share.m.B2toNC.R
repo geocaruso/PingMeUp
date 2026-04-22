@@ -1,4 +1,4 @@
-#' Computes average cumulated percentage by classement from a classement grille so that classement can be computed for any number of number of actifs
+#' Computes the average cumulated percentage by classement from the AFTT classement grille so that classement can be computed for any number of actifs
 #'
 #' @param grille grille-classements per fixed number of actifs. Defalut is AFTT grille classsement: grille_classements_m
 #'
@@ -22,7 +22,7 @@
 #' 
 share.m.B2toNC<-function(grille=NULL){
   
-  #if NULL then use grille_classements_m from environement (loaded with package as it is in data folder) otherwise doen't work as this function is inside another one
+  #if NULL then use grille_classements_m from environement (loaded with package as it is in data folder)
     if (is.null(grille)) {
       data("grille_classements_m", envir = environment())
       grille <- grille_classements_m

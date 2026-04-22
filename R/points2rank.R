@@ -14,15 +14,15 @@
 #'
 #' @examples
 #' \donttest{
-#' # Load the default dataset (CRAN-standard workflow)
+#' # Load the default dataset
 #' data(pts_rk_m)
 #'
 #' # Compute rank for various point values
-#' rank.from.points(5000)          # uses pts_rk_m by default
-#' rank.from.points(1500, pts_rk_m)
+#' points2rank(5000)          # uses pts_rk_m by default
+#' points2rank(1500, pts_rk_m)
 #' }
 #' 
-rank.from.points <- function(p = 1000, pts_rk_mf = pts_rk_m) {
+points2rank <- function(p = 1000, pts_rk_mf = pts_rk_m) {
   names(pts_rk_mf) <- c("pts", "rk")
   
   pts_rk_mf <- pts_rk_mf[order(pts_rk_mf$pts, decreasing = TRUE), ]

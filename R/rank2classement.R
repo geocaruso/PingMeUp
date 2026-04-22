@@ -8,10 +8,10 @@
 #' @export
 #'
 #' @examples
-#' get.classement.m.from.rank(9350,15780)
-#' get.classement.m.from.rank(9350,16780)
+#' rank2classement(9350,15780)
+#' rank2classement(9350,16780)
 #' 
-get.classement.m.from.rank <- function(x, N_actifs,
+rank2classement <- function(x, N_actifs,
                                        sh_vector = share.m.B2toNC()) {
   Actifs2RankClassGrid <- ceiling(sh_vector * N_actifs / 5) * 5
   
