@@ -12,7 +12,7 @@ Description: Provides tools to scrape, clean, analyse and map table
     analysis of points, rankings, performance and geographic patterns. 
     This is an independent, non-official project; for official data 
     and rankings, refer to the AFTT Data Portal.
-License: MIT + file LICENSE
+License: MIT + file LICENSE 
 Encoding: UTF-8
 LazyData: false
 Roxygen: list(markdown = TRUE)
