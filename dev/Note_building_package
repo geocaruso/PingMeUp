@@ -47,3 +47,10 @@ git add .
 git commit -m "Initial commit of PingMeUp package"
 
  
+ VIII Documentation
+ 
+ pkgdown::build_site() to make html version of pkg manual
+ It is saved in /docs
+ 
+ or R CMD Rd2pdf .  in terminal to build pdf cran style. Not it genetares a file without a name, i.e. but "..pdf"" at root
+ 
