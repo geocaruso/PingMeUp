@@ -33,10 +33,10 @@
 #' 
 #' @examples
 #' \dontrun{
-#' Default: full dataset of players i.e. players_m
+#' # Default: full dataset of players i.e. players_m
 #' res <- players.new.classement()
 #' 
-#' Subset example: by club 
+#' # Subset example: by club 
 #' players_N051 <- subset(players_m, club == "N051")
 #' resN051 <- players.new.classement(players_N051)
 #' }

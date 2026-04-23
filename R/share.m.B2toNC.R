@@ -2,7 +2,7 @@
 #'
 #' @param grille grille-classements per fixed number of actifs. Defalut is AFTT grille classsement: grille_classements_m
 #'
-#' @returns named vector from B2 to NC and their cumulated share of players. When restimated to known values of the official grid, error is in the margin of 5 ranks (see example)
+#' @returns named vector from B2 to NC and their cumulated share of players. When reestimated to known values of the official grid, error is in the margin of 5 ranks (see example)
 #' 
 #' @export
 #' 

@@ -27,6 +27,9 @@
 #'   tables$diff_table
 #' }
 #'
+#' @importFrom stats addmargins
+#' @importFrom utils capture.output
+#' 
 #' @export
 classement.transitions <- function(old, new,
                               ordre=c("NC","E6","E4","E2","E0",

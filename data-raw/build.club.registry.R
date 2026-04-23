@@ -16,6 +16,9 @@
 #' @param max_delay_sec Maximum delay between requests in seconds.
 #'
 #' @return Save files and invisibly returns a list with `club_registry` and `club_registry_archive`
+#' 
+#' @seealso \code{\link{get.club.list}}
+#' 
 #' @export
 build.club.registry <- function(min_delay_sec = 1,
                                  max_delay_sec = 2) {

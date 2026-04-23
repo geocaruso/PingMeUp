@@ -14,12 +14,16 @@
 #' @note
 #' Performs a single web request. Uses the \pkg{rvest} package for
 #' HTML parsing.
+#' 
+#' @seealso \code{build.club.registry} in \code{data-raw/} which calls this function internally.
 #'
 #' @examples
 #' \dontrun{
 #' clubs <- get.club.list()
 #' head(clubs)
 #' }
+#' 
+#' @export
 
 get.club.list <- function() {
   # URL annuaire clubs

@@ -1,17 +1,16 @@
-^dev/
-  ^README\.html$
-  ^README_files/
-  ^vignettes/.*\.html$
-  ^\.Rproj\.user$
-  ^.*\.Rproj$
-  ^\.RData$
-  ^\.git$
-  ^\.gitignore$
+^dev$
+^README\.html$
+^README_files$
+^vignettes/.*\.html$
+^\.Rproj\.user$
+^.*\.Rproj$
+^\.RData$
+^\.git$
+^\.gitignore$
 ^doc$
 ^Meta$
 ^docs$
 ^pkgdown$
 ^\.github$
-!^_pkgdown\.yml$
-!^inst/app/
-
+^_pkgdown\.yml$
+^data-raw$

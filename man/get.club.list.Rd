@@ -28,4 +28,8 @@ HTML parsing.
 clubs <- get.club.list()
 head(clubs)
 }
+
+}
+\seealso{
+\code{build.club.registry} in \code{data-raw/} which calls this function internally.
 }

@@ -1,6 +1,7 @@
 Package: PingMeUp
 Title: Tools for Exploring AFTT Table Tennis Data
 Version: 0.1.0
+Date: 2026-04-23
 Authors@R: 
     person("Geoffrey", "Caruso", 
            email = "geoffrey.caruso@uni.lu", 
@@ -14,6 +15,7 @@ Description: Provides tools to scrape, clean, analyse and map table
     and rankings, refer to the AFTT Data Portal.
 License: MIT + file LICENSE 
 Encoding: UTF-8
+Depends: R (>= 3.5.0)
 LazyData: false
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
@@ -25,3 +27,4 @@ Imports:
     rvest,
     stringr
 URL: https://geocaruso.github.io/PingMeUp/
+BugReports: https://github.com/geocaruso/PingMeUp/issues
