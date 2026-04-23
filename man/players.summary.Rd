@@ -4,7 +4,7 @@
 \alias{players.summary}
 \title{Summary (wrapper) of player counts and tables}
 \usage{
-players.summary(players = players_m)
+players.summary(players = NULL)
 }
 \arguments{
 \item{players}{A players data.frame. Defaults to \code{players_m}, but you may

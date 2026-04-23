@@ -20,7 +20,7 @@ share.m.B2toNC(grille = NULL)
 ## Value
 
 named vector from B2 to NC and their cumulated share of players. When
-restimated to known values of the official grid, error is in the margin
+reestimated to known values of the official grid, error is in the margin
 of 5 ranks (see example)
 
 ## Examples

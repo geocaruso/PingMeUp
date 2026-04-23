@@ -5,7 +5,7 @@ Active players per classement letter
 ## Usage
 
 ``` r
-table.actives.class.l(players = players_m)
+table.actives.class.l(players = NULL)
 ```
 
 ## Arguments

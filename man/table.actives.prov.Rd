@@ -4,7 +4,7 @@
 \alias{table.actives.prov}
 \title{Active players per province}
 \usage{
-table.actives.prov(players = players_m)
+table.actives.prov(players = NULL)
 }
 \arguments{
 \item{players}{A players data.frame. Defaults to \code{players_m}, but you may

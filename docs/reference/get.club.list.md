@@ -30,6 +30,11 @@ A data frame with columns:
 
 Performs a single web request. Uses the rvest package for HTML parsing.
 
+## See also
+
+`build.club.registry` in `data-raw/` which calls this function
+internally.
+
 ## Examples
 
 ``` r

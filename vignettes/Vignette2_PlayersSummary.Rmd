@@ -1,0 +1,59 @@
+---
+title: "Players Summaries"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Players Summaries}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+A number of aggregate outputs are pre-computed with `players.summary.R`
+
+## Total and active players
+
+```{r include=FALSE}
+data("players_m", package = "PingMeUp")
+```
+
+
+```{r}
+PingMeUp::count.players()
+PingMeUp::count.actives()
+```
+## Active players per province or classement
+
+Actives per province:
+```{r}
+PingMeUp::table.actives.prov()
+```
+
+Actives per classement (detailled or letter)
+```{r}
+PingMeUp::table.actives.class()
+PingMeUp::table.actives.class.l()
+#Where you see 75% of players are D,E or NC
+round(100*prop.table(PingMeUp::table.actives.class.l()),digits=2)
+```
+
+## Wrapping up and subsets:
+
+A wrapper is made to compute those aggregates.
+```{r}
+PingMeUp::players.summary()
+```
+ All can be applied to subsets, for example a club:
+ 
+```{r}
+PingMeUp::players.summary(players_m[players_m$club=="N051",])
+```
+
+a set of provinces, e.g. French speaking:
+
+```{r}
+FRprov<-c("BBW","H","L","Lx","N")
+PingMeUp::players.summary(players_m[players_m$prov %in% FRprov,])
+```
+
+ 
+

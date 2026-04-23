@@ -4,7 +4,7 @@
 \alias{count.players}
 \title{Count total players}
 \usage{
-count.players(players = players_m)
+count.players(players = NULL)
 }
 \arguments{
 \item{players}{A players data.frame. Defaults to \code{players_m}, but you may

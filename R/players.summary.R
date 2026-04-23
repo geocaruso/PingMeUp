@@ -5,7 +5,11 @@
 #'   `players_m_archive[["YYYY_MM"]]` or `players_f_archive[["YYYY_MM"]]`.
 #' @return Integer: number of players.
 #' @export
-count.players <- function(players = players_m) {
+count.players <- function(players = NULL) {
+  if (is.null(players)) {
+    data("players_m", package = "PingMeUp")
+    players <- players_m
+  }
   nrow(players)
 }
 
@@ -15,7 +19,12 @@ count.players <- function(players = players_m) {
 #'   supply `players_f` or any archived snapshot.
 #' @return Integer: number of active players.
 #' @export
-count.actives <- function(players = players_m) {
+count.actives <- function(players = NULL) {
+  if (is.null(players)) {
+    data("players_m", package = "PingMeUp")
+    players <- players_m
+  }
+  
   sum(players$position_bis != "Inactive")
 }
 
@@ -25,7 +34,12 @@ count.actives <- function(players = players_m) {
 #'   supply `players_f` or any archived snapshot.
 #' @return A table of active players by province.
 #' @export
-table.actives.prov <- function(players = players_m) {
+table.actives.prov <- function(players = NULL) {
+  if (is.null(players)) {
+    data("players_m", package = "PingMeUp")
+    players <- players_m
+  }
+  
   table(players$prov[players$position_bis != "Inactive"])
 }
 
@@ -35,7 +49,12 @@ table.actives.prov <- function(players = players_m) {
 #'   supply `players_f` or any archived snapshot.
 #' @return A table of active players by classement.
 #' @export
-table.actives.class <- function(players = players_m) {
+table.actives.class <- function(players = NULL) {
+  if (is.null(players)) {
+    data("players_m", package = "PingMeUp")
+    players <- players_m
+  }
+
   table(players$classement[players$position_bis != "Inactive"])
 }
 
@@ -45,9 +64,15 @@ table.actives.class <- function(players = players_m) {
 #'   supply `players_f` or any archived snapshot.
 #' @return A table of active players by classement letter.
 #' @export
-table.actives.class.l <- function(players = players_m) {
+table.actives.class.l <- function(players = NULL) {
+  if (is.null(players)) {
+    data("players_m", package = "PingMeUp")
+    players <- players_m
+  }
+  
   table(players$classement_lettre[players$position_bis != "Inactive"])
 }
+
 
 #' Summary (wrapper) of player counts and tables
 #'
@@ -55,7 +80,12 @@ table.actives.class.l <- function(players = players_m) {
 #'   supply `players_f` or any archived snapshot.
 #' @return A list containing counts and tables for the supplied dataset.
 #' @export
-players.summary <- function(players = players_m) {
+players.summary <- function(players = NULL) {
+  if (is.null(players)) {
+    data("players_m", package = "PingMeUp")
+    players <- players_m
+  }
+  
   list(
     count.players         = count.players(players),
     count.actives         = count.actives(players),

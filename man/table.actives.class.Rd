@@ -4,7 +4,7 @@
 \alias{table.actives.class}
 \title{Active players per classement}
 \usage{
-table.actives.class(players = players_m)
+table.actives.class(players = NULL)
 }
 \arguments{
 \item{players}{A players data.frame. Defaults to \code{players_m}, but you may

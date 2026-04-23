@@ -6,6 +6,9 @@
 
 ## Citation
 
+Source:
+[`DESCRIPTION`](https://github.com/geocaruso/PingMeUp/blob/HEAD/DESCRIPTION)
+
 Caruso G (2026). *PingMeUp: Tools for Exploring AFTT Table Tennis Data*.
 R package version 0.1.0, <https://geocaruso.github.io/PingMeUp/>.
 
