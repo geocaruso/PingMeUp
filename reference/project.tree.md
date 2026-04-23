@@ -37,6 +37,7 @@ directory tree.
 ``` r
 # Print the project tree, excluding the dev/ folder
 project.tree(".", exclude = "dev")
+#> |--classement.transitions.html
 #> |--club_registry.html
 #> |--count.actives.html
 #> |--count.players.html
@@ -44,12 +45,14 @@ project.tree(".", exclude = "dev")
 #> |--get.club.player.list.m.html
 #> |--grille_classements_m.html
 #> |--index.html
+#> |--players.new.classement.html
 #> |--players.summary.html
 #> |--players_m.html
 #> \-points2rank.html
 
 # Exclude multiple folders
 project.tree(".", exclude = c("dev", ".git", ".Rproj.user"))
+#> |--classement.transitions.html
 #> |--club_registry.html
 #> |--count.actives.html
 #> |--count.players.html
@@ -57,6 +60,7 @@ project.tree(".", exclude = c("dev", ".git", ".Rproj.user"))
 #> |--get.club.player.list.m.html
 #> |--grille_classements_m.html
 #> |--index.html
+#> |--players.new.classement.html
 #> |--players.summary.html
 #> |--players_m.html
 #> \-points2rank.html

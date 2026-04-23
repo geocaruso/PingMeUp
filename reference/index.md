@@ -2,6 +2,8 @@
 
 ## All functions
 
+- [`classement.transitions()`](https://geocaruso.github.io/PingMeUp/reference/classement.transitions.md)
+  : Build transition and difference tables for two classement vectors
 - [`club_registry`](https://geocaruso.github.io/PingMeUp/reference/club_registry.md)
   [`club_registry_archive`](https://geocaruso.github.io/PingMeUp/reference/club_registry.md)
   : Club Registry (Latest Snapshot) and Archive
@@ -15,6 +17,9 @@
   : Retrieve players messieurs list (ranked) for a given club
 - [`grille_classements_m`](https://geocaruso.github.io/PingMeUp/reference/grille_classements_m.md)
   : AFTT classement grid (Messieurs)
+- [`players.new.classement()`](https://geocaruso.github.io/PingMeUp/reference/players.new.classement.md)
+  : Compute new classement for a set of players and reports
+  upward/downward movements.
 - [`players.summary()`](https://geocaruso.github.io/PingMeUp/reference/players.summary.md)
   : Summary (wrapper) of player counts and tables
 - [`players_m`](https://geocaruso.github.io/PingMeUp/reference/players_m.md)
