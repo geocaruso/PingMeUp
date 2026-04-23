@@ -9,7 +9,9 @@
   ^\.gitignore$
 ^doc$
 ^Meta$
-^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
 ^\.github$
+!^_pkgdown\.yml$
+!^inst/app/
+
