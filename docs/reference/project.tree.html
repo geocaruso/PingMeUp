@@ -80,94 +80,32 @@ the directory tree.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Print the project tree, excluding the dev/ folder</span></span></span>
 <span class="r-in"><span><span class="fu">project.tree</span><span class="op">(</span><span class="st">"."</span>, exclude <span class="op">=</span> <span class="st">"dev"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--classement.transitions.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--classement.transitions.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--club_registry.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--club_registry.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--club_registry_archive.html</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--count.actives.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--count.actives.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--count.players.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--count.players.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--get.club.list.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--get.club.list.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--get.club.player.list.m.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--get.club.player.list.m.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--grille_classements_m.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--grille_classements_m.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--index.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--index.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--players.new.classement.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--players.new.classement.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--players.summary.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--players.summary.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--players_f.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--players_f_archive.html</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--players_m.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--players_m.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--players_m_archive.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--points2rank.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--points2rank.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--project.tree.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--project.tree.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--pts_rk_f.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--pts_rk_m.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--pts_rk_m.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--rank2classement.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--rank2classement.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--share.m.B2toNC.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--share.m.B2toNC.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--table.actives.class.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--table.actives.class.l.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--table.actives.class.l.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--table.actives.class.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--table.actives.prov.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> \-table.actives.prov.md</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> \-points2rank.html</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Exclude multiple folders</span></span></span>
 <span class="r-in"><span><span class="fu">project.tree</span><span class="op">(</span><span class="st">"."</span>, exclude <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"dev"</span>, <span class="st">".git"</span>, <span class="st">".Rproj.user"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--classement.transitions.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--classement.transitions.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--club_registry.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--club_registry.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--club_registry_archive.html</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--count.actives.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--count.actives.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--count.players.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--count.players.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--get.club.list.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--get.club.list.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--get.club.player.list.m.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--get.club.player.list.m.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--grille_classements_m.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--grille_classements_m.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--index.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--index.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--players.new.classement.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--players.new.classement.md</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--players.summary.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--players.summary.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--players_f.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--players_f_archive.html</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> |--players_m.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--players_m.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--players_m_archive.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--points2rank.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--points2rank.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--project.tree.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--project.tree.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--pts_rk_f.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--pts_rk_m.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--pts_rk_m.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--rank2classement.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--rank2classement.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--share.m.B2toNC.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--share.m.B2toNC.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--table.actives.class.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--table.actives.class.l.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--table.actives.class.l.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--table.actives.class.md</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |--table.actives.prov.html</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> \-table.actives.prov.md</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> \-points2rank.html</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
