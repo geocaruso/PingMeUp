@@ -299,7 +299,7 @@ function clearPoints() {
 
 // Rang estimé
 let ptsData = [];
-fetch('https://quadtrees.lu/brol/load_pts_rk.php')
+fetch('https://raw.githubusercontent.com/geocaruso/PingMeUp/main/data-raw/pts_rk_m.json')
   .then(r => r.json())
   .then(data => ptsData = data);
 
