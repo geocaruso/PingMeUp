@@ -3,7 +3,7 @@ pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   Vignette1_Registries: Vignette1_Registries.html
-last_built: 2026-04-23T15:58Z
+last_built: 2026-04-23T16:04Z
 urls:
   reference: https://geocaruso.github.io/PingMeUp/reference
   article: https://geocaruso.github.io/PingMeUp/articles
