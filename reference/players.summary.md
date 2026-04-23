@@ -5,7 +5,7 @@ Summary (wrapper) of player counts and tables
 ## Usage
 
 ``` r
-players.summary(players = players_m)
+players.summary(players = NULL)
 ```
 
 ## Arguments

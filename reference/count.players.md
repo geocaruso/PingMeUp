@@ -5,7 +5,7 @@ Count total players
 ## Usage
 
 ``` r
-count.players(players = players_m)
+count.players(players = NULL)
 ```
 
 ## Arguments

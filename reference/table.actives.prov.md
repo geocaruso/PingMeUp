@@ -5,7 +5,7 @@ Active players per province
 ## Usage
 
 ``` r
-table.actives.prov(players = players_m)
+table.actives.prov(players = NULL)
 ```
 
 ## Arguments
