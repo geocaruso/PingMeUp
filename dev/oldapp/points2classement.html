@@ -278,7 +278,7 @@
 
 <script>
 // Charger N auto
-fetch('https://quadtrees.lu/brol/proxy_fetch_actifs_m.php')
+fetch('proxy_fetch_actifs_m.php')
   .then(r => r.text())
   .then(val => {
     const n = parseInt(val.trim());
@@ -299,7 +299,7 @@ function clearPoints() {
 
 // Rang estimé
 let ptsData = [];
-fetch('https://quadtrees.lu/brol/load_pts_rk.php')
+fetch('load_pts_rk.php')
   .then(r => r.json())
   .then(data => ptsData = data);
 

@@ -268,8 +268,7 @@
   du moment (selon le site AFTT).
   <br>
   Si l'utilisateur introduit des points plutôt que le rang, ce dernier est lui-même estimé
-  sur base des points et rang de tous les joueurs actifs des clubs francophones
-   (indice de clubs N, L, Lx, H et BBW) le plus récent gentiment téléchargés du site AFTT (1er avril 2026).
+  sur base de la liste des points et rang de tous les joueurs actifs la plus récente gentiment téléchargés du site AFTT (1er avril 2026).
 </p>
 
   </div>
@@ -299,7 +298,7 @@ function clearPoints() {
 
 // Rang estimé
 let ptsData = [];
-fetch('https://quadtrees.lu/brol/load_pts_rk.php')
+fetch('https://quadtrees.lu/brol/load_pts_rk_m.php')
   .then(r => r.json())
   .then(data => ptsData = data);
 

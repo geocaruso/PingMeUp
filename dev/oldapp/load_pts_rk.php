@@ -2,9 +2,9 @@
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
-$file = 'pts_rk_m.json';
+$file = 'pts_rk.json';
 if (!file_exists($file)) {
-    echo json_encode(["error" => "pts_rk_m.json not found"]);
+    echo json_encode(["error" => "pts_rk.json not found"]);
     exit;
 }
 
