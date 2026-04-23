@@ -16,7 +16,7 @@
 #' @export
 build.pts.rk <- function(mf = "m",
                          players = NULL,
-                         json_dir = "inst/app",
+                         json_dir = "data-raw",
                          rda_dir  = "data") {
   
   # Validate mf
