@@ -96,7 +96,7 @@ build.club.registry <- function(min_delay_sec = 1,
   club_registry <- merge(club_base, addresses, by = "indice", all.x = TRUE)
   
   # attach metadata
-  attr(club_registry, "html_raw") <- html_list
+  #attr(club_registry, "html_raw") <- html_list
   attr(club_registry, "year")     <- year
   attr(club_registry, "month")    <- month
   
