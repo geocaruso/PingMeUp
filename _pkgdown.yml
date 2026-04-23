@@ -2,3 +2,14 @@ url: https://geocaruso.github.io/PingMeUp/
 template:
   bootstrap: 5
 
+navbar:
+  structure:
+    left:
+      - home
+      - reference
+      - articles
+      - app
+  components:
+    app:
+      text: "Classement App"
+      href: app/points2classement.html
