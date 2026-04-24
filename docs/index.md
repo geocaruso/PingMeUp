@@ -56,31 +56,13 @@ See the Vignettes for more use and analytics (plots, etc.)
 
 ### Compute your classement from points app
 
-The package repository includes a small web app
-(`points2classement.html`) located in `inst/app/`.  
-This app uses PHP to load the ranking tables (json file), so it
-**cannot** be opened by double‑clicking the HTML file.
-
-To run it, you need to start a small local web server (or copy files to
-a real webserver)
-
-On a mac/linux: open a terminal and go to the app folder
-
-``` bash
-cd path/to/PingMeUp/inst/app
-```
-
-(If you installed the package from GitHub, the folder is inside your R
-library. Or just download the app folder from the repo)
-
-``` bash
-php -S localhost:8000
-```
-
-Open the app in your browser by going to
-
-``` bash
-http://localhost:8000/points2classement.html
-```
+The package repository also includes a small web app
+(`points2classement.html`) directly accessible at
+<https://geocaruso.github.io/PingMeUp/app/points2classement.html>, where
+it is sourced from the `pkgdown/assets/app/` folder (for those who would
+like to improve it). It uses a php file elsewhere to fetch the current
+number of active players from AFTT dynamically. Note that this app has
+been generated semi-automatically with AI after few prompts and the
+classements estimates functions made within the R project.
 
 Enjoy!

@@ -98,15 +98,7 @@
 <div class="section level3">
 <h3 id="compute-your-classement-from-points-app">Compute your classement from points app<a class="anchor" aria-label="anchor" href="#compute-your-classement-from-points-app"></a>
 </h3>
-<p>The package repository includes a small web app (<code>points2classement.html</code>) located in <code>inst/app/</code>.<br>
-This app uses PHP to load the ranking tables (json file), so it <strong>cannot</strong> be opened by double‑clicking the HTML file.</p>
-<p>To run it, you need to start a small local web server (or copy files to a real webserver)</p>
-<p>On a mac/linux: open a terminal and go to the app folder</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">cd</span> path/to/PingMeUp/inst/app</span></code></pre></div>
-<p>(If you installed the package from GitHub, the folder is inside your R library. Or just download the app folder from the repo)</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">php</span> <span class="at">-S</span> localhost:8000</span></code></pre></div>
-<p>Open the app in your browser by going to</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">http://localhost:8000/points2classement.html</span></span></code></pre></div>
+<p>The package repository also includes a small web app (<code>points2classement.html</code>) directly accessible at <a href="https://geocaruso.github.io/PingMeUp/app/points2classement.html" class="uri">https://geocaruso.github.io/PingMeUp/app/points2classement.html</a>, where it is sourced from the <code>pkgdown/assets/app/</code> folder (for those who would like to improve it). It uses a php file elsewhere to fetch the current number of active players from AFTT dynamically. Note that this app has been generated semi-automatically with AI after few prompts and the classements estimates functions made within the R project.</p>
 <p>Enjoy!</p>
 </div>
 </div>
