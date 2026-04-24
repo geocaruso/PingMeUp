@@ -150,3 +150,32 @@ PingMeUp::players.summary(players_m[players_m$prov %in% FRprov,])
     ## 
     ##    A    B    C    D    E   NC 
     ##   18  685 2383 3306 4396 1727
+
+## Number of players and clubs
+
+Number of registered players (active and inactive) per club
+
+``` r
+club_n_players <- data.frame(table(players_m$club))
+names(club_n_players) <- c("indice","n_players")
+club_n_players <- merge(club_n_players, club_registry[,c("indice","label","province")],by="indice")
+summary(club_n_players$n_players)
+```
+
+    ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    ##    2.00   30.00   46.00   54.85   70.00  303.00
+
+``` r
+library(ggplot2)
+
+ggplot(club_n_players, aes(x = province, y = n_players)) +
+  geom_boxplot(fill = "lightblue") +
+  labs(
+    title = "Distribution of Club Size by Province",
+    x = "Province",
+    y = "Number of Players"
+  ) +
+  theme_minimal()
+```
+
+![](Vignette2_PlayersSummary_files/figure-html/unnamed-chunk-10-1.png)
