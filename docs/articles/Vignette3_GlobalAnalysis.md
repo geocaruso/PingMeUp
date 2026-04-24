@@ -7,6 +7,9 @@
 ``` r
 library(PingMeUp)
 data("players_m", package = "PingMeUp")
+
+library(ggridges)
+library(ggplot2)
 ```
 
 ``` r
@@ -80,6 +83,78 @@ graph.pct.classements(players_m,actifs_only = FALSE)
 
 ![](Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-3-2.png)
 
+## Analysis of points per classement
+
+``` r
+players_AFTT_noA <- players_m[players_m$classement_lettre != "A", ]
+players_AFTT_noA$classement <- factor(players_AFTT_noA$classement)
+Points_class_qt <- aggregate(points ~ classement, data = players_AFTT_noA, FUN = quantile)
+Points_class_qt <- do.call(data.frame, Points_class_qt)
+
+Points_class_mean <- aggregate(points ~ classement, data = players_AFTT_noA, FUN = mean)
+Points_class <- merge(Points_class_mean, Points_class_qt, by = "classement")
+names(Points_class) <- c("classement",
+                         "mean_pts",
+                         "min_pts",
+                         "qt25_pts",
+                         "median_pts",
+                         "qt75_pts",
+                         "max_pts")
+
+Points_class
+```
+
+    ##    classement  mean_pts min_pts  qt25_pts median_pts  qt75_pts max_pts
+    ## 1          B0 2442.1399 2308.80 2338.5250   2437.385 2506.7875 2694.69
+    ## 2          B2 2227.8380 1996.41 2161.3925   2215.800 2295.1900 2610.41
+    ## 3          B4 2004.1629 1802.72 1941.4400   1995.000 2060.1975 2284.89
+    ## 4          B6 1818.5295 1531.15 1759.6550   1818.670 1869.5150 2126.53
+    ## 5          C0 1664.6280 1256.81 1602.6600   1660.350 1718.2400 1992.02
+    ## 6          C2 1508.6019 1127.81 1452.1900   1503.390 1564.4950 1956.30
+    ## 7          C4 1361.4511 1083.51 1304.0500   1357.720 1414.6350 1745.58
+    ## 8          C6 1231.9200  813.76 1163.5800   1224.280 1289.4000 1637.74
+    ## 9          D0 1100.5793  802.39 1035.6575   1088.660 1153.9475 1538.55
+    ## 10         D2  983.4690  695.54  917.0250    973.365 1030.4825 1599.21
+    ## 11         D4  864.0185  609.26  798.5425    854.140  914.3275 1414.12
+    ## 12         D6  758.0462  495.36  688.6250    744.440  806.9900 1412.65
+    ## 13         E0  638.3574  293.50  571.1975    625.640  685.7100 1274.36
+    ## 14         E2  512.4727  192.56  438.1825    500.265  566.3500 1387.11
+    ## 15         E4  365.7516    0.00  292.6100    343.875  421.2950  981.10
+    ## 16         E6  209.2150    0.00  140.9125    187.000  263.6650  800.45
+    ## 17         NC  101.8065    0.00   93.2200    100.000  100.0000  801.35
+
+``` r
+classement_cols <- c(B0 = "darkred",B2 = "darkred",B4 = "darkred",
+  B6 = "darkred",C0 = "darkorange",C2 = "darkorange",
+  C4 = "darkorange",C6 = "darkorange",D0 = "goldenrod",
+  D2 = "goldenrod",D4 = "goldenrod",D6 = "goldenrod",
+  E0 = "olivedrab4",E2 = "olivedrab4",E4 = "olivedrab4",
+  E6 = "olivedrab4",NC = "dodgerblue3")
+
+ggplot(players_AFTT_noA,
+       aes(x = points,y = classement,
+         fill = classement, color = classement)) +
+  geom_density_ridges(scale = 2, rel_min_height = 0.01,
+                      color = NA) +
+  geom_vline(data = Points_class,
+    aes(xintercept = mean_pts, color = classement),
+    linewidth = 0.4, alpha = 0.5) +
+  scale_fill_manual(values = classement_cols) +
+  scale_color_manual(values = classement_cols) +
+  scale_x_continuous(breaks = Points_class$mean_pts,
+                     labels = round(Points_class$mean_pts, 0)) +
+  theme_minimal(base_size = 14) +
+  xlab("points (1er mois précédent)") +
+  theme(axis.text.x = element_text(angle = 90,vjust = 0.5,
+                                   hjust = 1,
+                                   color = classement_cols[Points_class$classement],face = "bold"),
+        legend.position = "none")
+```
+
+    ## Picking joint bandwidth of 20
+
+![](Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-4-1.png)
+
 ## Estimate of new classement and analysis of change
 
 To estimate the new classement for a series of players, use the
@@ -94,10 +169,12 @@ showing - a transition table with frequencies of players in each pair of
 old to new classement. Most players (about 50%) don’t change of
 classement hence the diagonal is strong. Also there are more upward
 changes than downward changes, meaning training efforts generally
-pays-off! - a difference table, where we see most players don’t change
-of classement and only few gain 3 or more classements in a season. The
-average is around 0.3 classement, which is a rate to which every club or
-province could compare as a way to measure performance.
+pays-off! However you will notice that from D4 and upper, there is
+usually more people going one classement down than up. - a difference
+table, where we see most players don’t change of classement and only few
+gain 3 or more classements in a season. The average is around 0.3
+classement, which is a rate to which every club or province could
+compare as a way to measure performance.
 
 Applied to all players (default), the computation gives:
 
@@ -105,7 +182,9 @@ Applied to all players (default), the computation gives:
 count.actives()
 ```
 
-    ## [1] 17411
+``` small-text
+## [1] 17411
+```
 
 ``` r
 players_m_new <- players.new.classement()
@@ -164,8 +243,10 @@ players_m_new <- players.new.classement()
 summary(players_m_new$classement_diff)
 ```
 
-    ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
-    ## -3.0000  0.0000  0.0000  0.3033  1.0000  7.0000    8849
+``` small-text
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+## -3.0000  0.0000  0.0000  0.3033  1.0000  7.0000    8849
+```
 
 ``` r
 attr(players_m_new, which="diff_table")
@@ -182,4 +263,4 @@ plot(attr(players_m_new, which="diff_table")[-length(attr(players_m_new, which="
      ylab ="Fréquence (nombre de joueurs)")
 ```
 
-![](Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-5-1.png)
+![](Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-6-1.png)

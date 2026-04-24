@@ -13,6 +13,9 @@ vignette: >
 ```{r}
 library(PingMeUp)
 data("players_m", package = "PingMeUp")
+
+library(ggridges)
+library(ggplot2)
 ```
 
 ```{r}
@@ -52,10 +55,60 @@ graph.pct.classements(players_m,actifs_only = FALSE)
 
 ```
 
+## Analysis of points per classement
+
+```{r}
+players_AFTT_noA <- players_m[players_m$classement_lettre != "A", ]
+players_AFTT_noA$classement <- factor(players_AFTT_noA$classement)
+Points_class_qt <- aggregate(points ~ classement, data = players_AFTT_noA, FUN = quantile)
+Points_class_qt <- do.call(data.frame, Points_class_qt)
+
+Points_class_mean <- aggregate(points ~ classement, data = players_AFTT_noA, FUN = mean)
+Points_class <- merge(Points_class_mean, Points_class_qt, by = "classement")
+names(Points_class) <- c("classement",
+                         "mean_pts",
+                         "min_pts",
+                         "qt25_pts",
+                         "median_pts",
+                         "qt75_pts",
+                         "max_pts")
+
+Points_class
+
+
+classement_cols <- c(B0 = "darkred",B2 = "darkred",B4 = "darkred",
+  B6 = "darkred",C0 = "darkorange",C2 = "darkorange",
+  C4 = "darkorange",C6 = "darkorange",D0 = "goldenrod",
+  D2 = "goldenrod",D4 = "goldenrod",D6 = "goldenrod",
+  E0 = "olivedrab4",E2 = "olivedrab4",E4 = "olivedrab4",
+  E6 = "olivedrab4",NC = "dodgerblue3")
+
+ggplot(players_AFTT_noA,
+       aes(x = points,y = classement,
+         fill = classement, color = classement)) +
+  geom_density_ridges(scale = 2, rel_min_height = 0.01,
+                      color = NA) +
+  geom_vline(data = Points_class,
+    aes(xintercept = mean_pts, color = classement),
+    linewidth = 0.4, alpha = 0.5) +
+  scale_fill_manual(values = classement_cols) +
+  scale_color_manual(values = classement_cols) +
+  scale_x_continuous(breaks = Points_class$mean_pts,
+                     labels = round(Points_class$mean_pts, 0)) +
+  theme_minimal(base_size = 14) +
+  xlab("points (1er mois précédent)") +
+  theme(axis.text.x = element_text(angle = 90,vjust = 0.5,
+                                   hjust = 1,
+                                   color = classement_cols[Points_class$classement],face = "bold"),
+        legend.position = "none")
+```
+
+
+
 ## Estimate of new classement and analysis of change
 
 To estimate the new classement for a series of players, use the `players.new.classement()` function. It is based on current points of each players and the total number of active players `count.actives()`. The function adds 2 columns in the data frame: the new classement (`classement_new`) and the number of classements upward or downward (`classement_diff`). After computing, two tables are displayed, showing
-- a transition table with frequencies of players in each pair of old to new classement. Most players (about 50%) don't change of classement hence the diagonal is strong. Also there are more upward changes than downward changes, meaning training efforts generally pays-off!
+- a transition table with frequencies of players in each pair of old to new classement. Most players (about 50%) don't change of classement hence the diagonal is strong. Also there are more upward changes than downward changes, meaning training efforts generally pays-off! However you will notice that from D4 and upper, there is usually more people going one classement down than up.
 - a difference table, where we see most players don't change of classement and only few gain 3 or more classements in a season. The average is around 0.3 classement, which is a rate to which every club or province could compare as a way to measure performance.
 
 Applied to all players (default), the computation gives:
