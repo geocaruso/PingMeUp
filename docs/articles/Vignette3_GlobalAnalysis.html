@@ -131,10 +131,18 @@
 (actives or all)</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/graph.pct.classements.html">graph.pct.classements</a></span><span class="op">(</span><span class="va">players_m</span><span class="op">)</span></span></code></pre></div>
-<p><img src="Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-3-1.png" class="r-plt" width="100%" style="display: block; margin: auto;"></p>
+<div class="figure" style="text-align: center">
+<img src="Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-3-1.png" class="r-plt" alt="graph.pct.classements" width="100%"><p class="caption">
+graph.pct.classements
+</p>
+</div>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/graph.pct.classements.html">graph.pct.classements</a></span><span class="op">(</span><span class="va">players_m</span>,actifs_only <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
-<p><img src="Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-3-2.png" class="r-plt" width="100%" style="display: block; margin: auto;"></p>
+<div class="figure" style="text-align: center">
+<img src="Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-3-2.png" class="r-plt" alt="graph.pct.classements" width="100%"><p class="caption">
+graph.pct.classements
+</p>
+</div>
 </div>
 <div class="section level2">
 <h2 id="analysis-of-points-per-classement">Analysis of points per classement<a class="anchor" aria-label="anchor" href="#analysis-of-points-per-classement"></a>
@@ -201,15 +209,19 @@
 <span>                                   color <span class="op">=</span> <span class="va">classement_cols</span><span class="op">[</span><span class="va">Points_class</span><span class="op">$</span><span class="va">classement</span><span class="op">]</span>,face <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span>,</span>
 <span>        legend.position <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## Picking joint bandwidth of 20</span></span></code></pre>
-<p><img src="Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-4-1.png" class="r-plt" width="700"></p>
+<div class="figure">
+<img src="Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-4-1.png" class="r-plt" alt="Points_class" width="700"><p class="caption">
+Points_class
+</p>
+</div>
 </div>
 <div class="section level2">
 <h2 id="estimate-of-new-classement-and-analysis-of-change">Estimate of new classement and analysis of change<a class="anchor" aria-label="anchor" href="#estimate-of-new-classement-and-analysis-of-change"></a>
 </h2>
 <p>To estimate the new classement for a series of players, use the
 <code><a href="../reference/players.new.classement.html">players.new.classement()</a></code> function. It is based on current
-points of each players and the total number of active players
-<code><a href="../reference/count.actives.html">count.actives()</a></code>. The function adds 2 columns in the data
+points of each players and the total number of active players retrieved
+by <code><a href="../reference/count.actives.html">count.actives()</a></code>. The function adds 2 columns in the data
 frame: the new classement (<code>classement_new</code>) and the number
 of classements upward or downward (<code>classement_diff</code>). After
 computing, two tables are displayed, showing - a transition table with
@@ -286,7 +298,7 @@ performance.</p>
 <span><span class="co">##     5   105  2322  8542  5185   928   173    40    13     1     1 17315</span></span></code></pre>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">players_m_new</span>, which<span class="op">=</span><span class="st">"diff_table"</span><span class="op">)</span><span class="op">[</span><span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">players_m_new</span>, which<span class="op">=</span><span class="st">"diff_table"</span><span class="op">)</span><span class="op">)</span><span class="op">]</span>,</span>
-<span>     main<span class="op">=</span><span class="st">"Montées et descentes de classements"</span>,</span>
+<span>     main<span class="op">=</span><span class="st">"Montées et descentes de classement"</span>,</span>
 <span>     xlab <span class="op">=</span><span class="st">"Nombre de classements en plus ou moins"</span>,</span>
 <span>     ylab <span class="op">=</span><span class="st">"Fréquence (nombre de joueurs)"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-6-1.png" class="r-plt" width="100%" style="display: block; margin: auto;"></p>

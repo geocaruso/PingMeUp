@@ -12,7 +12,8 @@ A number of aggregate outputs are pre-computed with `players.summary.R`
 
 ## Total and active players
 
-```{r include=FALSE}
+```{r}
+library(PingMeUp)
 data("players_m", package = "PingMeUp")
 ```
 
@@ -70,7 +71,7 @@ club_n_players <- merge(club_n_players, club_registry[,c("indice","label","provi
 summary(club_n_players$n_players)
 ```
 
-```{r}
+```{r, fig.cap="Distribution of Club Size by Province"}
 library(ggplot2)
 
 ggplot(club_n_players, aes(x = province, y = n_players)) +

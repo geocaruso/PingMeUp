@@ -75,13 +75,17 @@ or all)
 graph.pct.classements(players_m)
 ```
 
-![](Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-3-1.png)
+![graph.pct.classements](Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-3-1.png)
+
+graph.pct.classements
 
 ``` r
 graph.pct.classements(players_m,actifs_only = FALSE)
 ```
 
-![](Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-3-2.png)
+![graph.pct.classements](Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-3-2.png)
+
+graph.pct.classements
 
 ## Analysis of points per classement
 
@@ -153,14 +157,16 @@ ggplot(players_AFTT_noA,
 
     ## Picking joint bandwidth of 20
 
-![](Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-4-1.png)
+![Points_class](Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-4-1.png)
+
+Points_class
 
 ## Estimate of new classement and analysis of change
 
 To estimate the new classement for a series of players, use the
 [`players.new.classement()`](https://geocaruso.github.io/PingMeUp/reference/players.new.classement.md)
 function. It is based on current points of each players and the total
-number of active players
+number of active players retrieved by
 [`count.actives()`](https://geocaruso.github.io/PingMeUp/reference/count.actives.md).
 The function adds 2 columns in the data frame: the new classement
 (`classement_new`) and the number of classements upward or downward
@@ -258,7 +264,7 @@ attr(players_m_new, which="diff_table")
 
 ``` r
 plot(attr(players_m_new, which="diff_table")[-length(attr(players_m_new, which="diff_table"))],
-     main="Montées et descentes de classements",
+     main="Montées et descentes de classement",
      xlab ="Nombre de classements en plus ou moins",
      ylab ="Fréquence (nombre de joueurs)")
 ```

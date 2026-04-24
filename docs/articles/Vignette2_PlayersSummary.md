@@ -5,6 +5,11 @@ A number of aggregate outputs are pre-computed with `players.summary.R`
 ## Total and active players
 
 ``` r
+library(PingMeUp)
+data("players_m", package = "PingMeUp")
+```
+
+``` r
 PingMeUp::count.players()
 ```
 
@@ -178,4 +183,7 @@ ggplot(club_n_players, aes(x = province, y = n_players)) +
   theme_minimal()
 ```
 
-![](Vignette2_PlayersSummary_files/figure-html/unnamed-chunk-10-1.png)
+![Distribution of Club Size by
+Province](Vignette2_PlayersSummary_files/figure-html/unnamed-chunk-10-1.png)
+
+Distribution of Club Size by Province

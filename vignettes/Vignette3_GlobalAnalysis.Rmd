@@ -48,7 +48,7 @@ df_labels_AFTT
 
 Plot of the frequency of each classement for all AFTT players (actives or all)
 
-```{r, fig.align='center', fig.height=5, fig.width=6, out.width='100%'}
+```{r, fig.cap="graph.pct.classements", fig.align='center', fig.height=5, fig.width=6, out.width='100%'}
 
 graph.pct.classements(players_m)
 graph.pct.classements(players_m,actifs_only = FALSE)
@@ -57,7 +57,7 @@ graph.pct.classements(players_m,actifs_only = FALSE)
 
 ## Analysis of points per classement
 
-```{r}
+```{r, fig.cap="Points_class"}
 players_AFTT_noA <- players_m[players_m$classement_lettre != "A", ]
 players_AFTT_noA$classement <- factor(players_AFTT_noA$classement)
 Points_class_qt <- aggregate(points ~ classement, data = players_AFTT_noA, FUN = quantile)
@@ -107,7 +107,7 @@ ggplot(players_AFTT_noA,
 
 ## Estimate of new classement and analysis of change
 
-To estimate the new classement for a series of players, use the `players.new.classement()` function. It is based on current points of each players and the total number of active players `count.actives()`. The function adds 2 columns in the data frame: the new classement (`classement_new`) and the number of classements upward or downward (`classement_diff`). After computing, two tables are displayed, showing
+To estimate the new classement for a series of players, use the `players.new.classement()` function. It is based on current points of each players and the total number of active players retrieved by `count.actives()`. The function adds 2 columns in the data frame: the new classement (`classement_new`) and the number of classements upward or downward (`classement_diff`). After computing, two tables are displayed, showing
 - a transition table with frequencies of players in each pair of old to new classement. Most players (about 50%) don't change of classement hence the diagonal is strong. Also there are more upward changes than downward changes, meaning training efforts generally pays-off! However you will notice that from D4 and upper, there is usually more people going one classement down than up.
 - a difference table, where we see most players don't change of classement and only few gain 3 or more classements in a season. The average is around 0.3 classement, which is a rate to which every club or province could compare as a way to measure performance.
 
@@ -121,7 +121,7 @@ summary(players_m_new$classement_diff)
 ```{r, fig.align='center', fig.height=6, fig.width=6, out.width='100%'}
 attr(players_m_new, which="diff_table")
 plot(attr(players_m_new, which="diff_table")[-length(attr(players_m_new, which="diff_table"))],
-     main="Montées et descentes de classements",
+     main="Montées et descentes de classement",
      xlab ="Nombre de classements en plus ou moins",
      ylab ="Fréquence (nombre de joueurs)")
 ```
