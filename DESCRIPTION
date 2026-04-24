@@ -20,12 +20,12 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 VignetteBuilder: knitr
-Suggests: knitr, rmarkdown
+Suggests: knitr, rmarkdown, ggridges
 Imports:
     httr,
     jsonlite,
     rvest,
     stringr,
-    ggplot2
+    ggplot2,
 URL: https://geocaruso.github.io/PingMeUp/
 BugReports: https://github.com/geocaruso/PingMeUp/issues

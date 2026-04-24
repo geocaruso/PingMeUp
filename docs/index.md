@@ -1,5 +1,9 @@
 # Ping Me Up project
 
+<https://geocaruso.github.io/PingMeUp/>
+
+source:<https://github.com/geocaruso/PingMeUp/>
+
 **Author:** [Geoffrey Caruso](mailto:geoffrey.caruso@uni.lu)
 
 This repository explores AFTT table tennis data using R.
