@@ -1,0 +1,103 @@
+---
+title: "Global Classements Analysis (all AFTT)"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Global Classements Analysis (all AFTT)}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+*To be cont'd*
+
+## Analysis of current percentage of each classement
+
+```{r}
+library(PingMeUp)
+data("players_m", package = "PingMeUp")
+```
+
+```{r}
+# Active players
+Actifs_AFTT <- players_m[players_m[, "position_bis"] != "Inactive", ]
+
+# Actives by classement
+tab_classement_Actifs_AFTT <- table(Actifs_AFTT[, "classement"])
+pct_classement_AFTT <- tab_classement_Actifs_AFTT / nrow(Actifs_AFTT)
+
+df_class_AFTT <- data.frame(
+  classement = names(tab_classement_Actifs_AFTT),
+  pct_classement_AFTT = round(as.numeric(pct_classement_AFTT),digits=4)
+)
+noAB0<-c("NC","E6","E4","E2","E0","D6","D4","D2","D0","C6","C4","C2","C0","B6","B4","B2")
+df_class_AFTT[df_class_AFTT$classement %in% noAB0,]
+
+# Actives by classement letter
+tab_lettre_Actifs_AFTT <- table(Actifs_AFTT[, "classement_lettre"])
+pct_letter_AFTT <- tab_lettre_Actifs_AFTT / nrow(Actifs_AFTT)
+pct_label_AFTT <- paste0(round(100 * pct_letter_AFTT), "%")
+
+df_labels_AFTT <- data.frame(
+  classement_lettre = names(tab_lettre_Actifs_AFTT),
+  pct_letter_AFTT = as.numeric(pct_letter_AFTT),
+  pct_label_AFTT = pct_label_AFTT
+)
+df_labels_AFTT
+```
+
+```{r, fig.align='center', fig.height=5, fig.width=6, out.width='100%'}
+library(ggplot2)
+
+AFTTplot <- ggplot(data = Actifs_AFTT) +
+  geom_bar(
+    aes(
+      x = classement_lettre,
+      fill = classement_lettre,
+      alpha = classement_chiffre,
+      y = after_stat(count / sum(count))
+    ),
+    col = "white",
+    lwd = 0.3,
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(
+    values = c(
+      A  = "grey30",
+      B  = "darkred",
+      C  = "darkorange",
+      D  = "goldenrod",
+      E  = "olivedrab4",
+      NC = "dodgerblue3"
+    ),
+    drop = FALSE
+  ) +
+  scale_alpha_manual(values = c(1, 0.9, 0.8, 0.7,1)) +
+  scale_y_continuous(labels = scales::percent) +
+  scale_x_discrete(drop = FALSE) +
+  coord_cartesian(ylim = c(0, 0.4)) +
+  theme_minimal() +
+  labs(
+    x = "Classement",
+    y = "Pourcentage des actifs",
+    title = "AFTT",
+    subtitle = paste(nrow(Actifs_AFTT), "actifs")
+  ) +
+  geom_text(
+    data = df_labels_AFTT,
+    aes(x = classement_lettre, y = pct_letter_AFTT, label = pct_label_AFTT),
+    vjust = -0.3,
+    size = 4
+  )
+
+AFTTplot
+```
+
+## Estimate of new classement and analysis of change
+
+```{r}
+players_m_new <- players.new.classement()
+```
+
+```{r, fig.align='center', fig.height=5, fig.width=6, out.width='100%'}
+attr(players_m_new, which="diff_table")
+plot(attr(players_m_new, which="diff_table")[-length(attr(players_m_new, which="diff_table"))])
+```
+
