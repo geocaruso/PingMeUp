@@ -15,6 +15,8 @@
   : Retrieve AFTT club list
 - [`get.club.player.list.m()`](https://geocaruso.github.io/PingMeUp/reference/get.club.player.list.m.md)
   : Retrieve players messieurs list (ranked) for a given club
+- [`graph.pct.classements()`](https://geocaruso.github.io/PingMeUp/reference/graph.pct.classements.md)
+  : Plot (ggplot) the distribution of player classements
 - [`grille_classements_m`](https://geocaruso.github.io/PingMeUp/reference/grille_classements_m.md)
   : AFTT classement grid (Messieurs)
 - [`players.new.classement()`](https://geocaruso.github.io/PingMeUp/reference/players.new.classement.md)

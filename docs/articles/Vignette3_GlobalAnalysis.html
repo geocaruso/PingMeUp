@@ -124,57 +124,38 @@
 <span><span class="co">## 4                 D     0.257021423            26%</span></span>
 <span><span class="co">## 5                 E     0.349376831            35%</span></span>
 <span><span class="co">## 6                NC     0.149216013            15%</span></span></code></pre>
+<p>Plot of the frequency of each classement for all AFTT players
+(actives or all)</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">AFTTplot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">Actifs_AFTT</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span></span>
-<span>      x <span class="op">=</span> <span class="va">classement_lettre</span>,</span>
-<span>      fill <span class="op">=</span> <span class="va">classement_lettre</span>,</span>
-<span>      alpha <span class="op">=</span> <span class="va">classement_chiffre</span>,</span>
-<span>      y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes_eval.html" class="external-link">after_stat</a></span><span class="op">(</span><span class="va">count</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">count</span><span class="op">)</span><span class="op">)</span></span>
-<span>    <span class="op">)</span>,</span>
-<span>    col <span class="op">=</span> <span class="st">"white"</span>,</span>
-<span>    lwd <span class="op">=</span> <span class="fl">0.3</span>,</span>
-<span>    show.legend <span class="op">=</span> <span class="cn">FALSE</span></span>
-<span>  <span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span></span>
-<span>    values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
-<span>      A  <span class="op">=</span> <span class="st">"grey30"</span>,</span>
-<span>      B  <span class="op">=</span> <span class="st">"darkred"</span>,</span>
-<span>      C  <span class="op">=</span> <span class="st">"darkorange"</span>,</span>
-<span>      D  <span class="op">=</span> <span class="st">"goldenrod"</span>,</span>
-<span>      E  <span class="op">=</span> <span class="st">"olivedrab4"</span>,</span>
-<span>      NC <span class="op">=</span> <span class="st">"dodgerblue3"</span></span>
-<span>    <span class="op">)</span>,</span>
-<span>    drop <span class="op">=</span> <span class="cn">FALSE</span></span>
-<span>  <span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_alpha_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">0.9</span>, <span class="fl">0.8</span>, <span class="fl">0.7</span>,<span class="fl">1</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html" class="external-link">scale_y_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="va"><a href="https://scales.r-lib.org/reference/percent_format.html" class="external-link">percent</a></span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_discrete.html" class="external-link">scale_x_discrete</a></span><span class="op">(</span>drop <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_cartesian.html" class="external-link">coord_cartesian</a></span><span class="op">(</span>ylim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.4</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span></span>
-<span>    x <span class="op">=</span> <span class="st">"Classement"</span>,</span>
-<span>    y <span class="op">=</span> <span class="st">"Pourcentage des actifs"</span>,</span>
-<span>    title <span class="op">=</span> <span class="st">"AFTT"</span>,</span>
-<span>    subtitle <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">Actifs_AFTT</span><span class="op">)</span>, <span class="st">"actifs"</span><span class="op">)</span></span>
-<span>  <span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html" class="external-link">geom_text</a></span><span class="op">(</span></span>
-<span>    data <span class="op">=</span> <span class="va">df_labels_AFTT</span>,</span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">classement_lettre</span>, y <span class="op">=</span> <span class="va">pct_letter_AFTT</span>, label <span class="op">=</span> <span class="va">pct_label_AFTT</span><span class="op">)</span>,</span>
-<span>    vjust <span class="op">=</span> <span class="op">-</span><span class="fl">0.3</span>,</span>
-<span>    size <span class="op">=</span> <span class="fl">4</span></span>
-<span>  <span class="op">)</span></span>
-<span></span>
-<span><span class="va">AFTTplot</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/graph.pct.classements.html">graph.pct.classements</a></span><span class="op">(</span><span class="va">players_m</span><span class="op">)</span></span></code></pre></div>
 <p><img src="Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-3-1.png" class="r-plt" width="100%" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/graph.pct.classements.html">graph.pct.classements</a></span><span class="op">(</span><span class="va">players_m</span>,actifs_only <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<p><img src="Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-3-2.png" class="r-plt" width="100%" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level2">
 <h2 id="estimate-of-new-classement-and-analysis-of-change">Estimate of new classement and analysis of change<a class="anchor" aria-label="anchor" href="#estimate-of-new-classement-and-analysis-of-change"></a>
 </h2>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<p>To estimate the new classement for a series of players, use the
+<code><a href="../reference/players.new.classement.html">players.new.classement()</a></code> function. It is based on current
+points of each players and the total number of active players
+<code><a href="../reference/count.actives.html">count.actives()</a></code>. The function adds 2 columns in the data
+frame: the new classement (<code>classement_new</code>) and the number
+of classements upward or downward (<code>classement_diff</code>). After
+computing, two tables are displayed, showing - a transition table with
+frequencies of players in each pair of old to new classement. Most
+players (about 50%) don’t change of classement hence the diagonal is
+strong. Also there are more upward changes than downward changes,
+meaning training efforts generally pays-off! - a difference table, where
+we see most players don’t change of classement and only few gain 3 or
+more classements in a season. The average is around 0.3 classement,
+which is a rate to which every club or province could compare as a way
+to measure performance.</p>
+<p>Applied to all players (default), the computation gives:</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/count.actives.html">count.actives</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## [1] 17411</span></span></code></pre>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">players_m_new</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/players.new.classement.html">players.new.classement</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## Best guess cumulated percentage based on means across columns of the provided grille. Excludes A's and B0 players as their number is fixed</span></span></code></pre>
 <pre><code><span><span class="co">## </span></span>
@@ -222,13 +203,20 @@
 <span><span class="co">## </span></span>
 <span><span class="co">##    -3    -2    -1     0     1     2     3     4     5     6     7   Sum </span></span>
 <span><span class="co">##     5   105  2322  8542  5185   928   173    40    13     1     1 17315</span></span></code></pre>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">players_m_new</span><span class="op">$</span><span class="va">classement_diff</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's </span></span>
+<span><span class="co">## -3.0000  0.0000  0.0000  0.3033  1.0000  7.0000    8849</span></span></code></pre>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">players_m_new</span>, which<span class="op">=</span><span class="st">"diff_table"</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## </span></span>
 <span><span class="co">##    -3    -2    -1     0     1     2     3     4     5     6     7   Sum </span></span>
 <span><span class="co">##     5   105  2322  8542  5185   928   173    40    13     1     1 17315</span></span></code></pre>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">players_m_new</span>, which<span class="op">=</span><span class="st">"diff_table"</span><span class="op">)</span><span class="op">[</span><span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">players_m_new</span>, which<span class="op">=</span><span class="st">"diff_table"</span><span class="op">)</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">players_m_new</span>, which<span class="op">=</span><span class="st">"diff_table"</span><span class="op">)</span><span class="op">[</span><span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">players_m_new</span>, which<span class="op">=</span><span class="st">"diff_table"</span><span class="op">)</span><span class="op">)</span><span class="op">]</span>,</span>
+<span>     main<span class="op">=</span><span class="st">"Montées et descentes de classements"</span>,</span>
+<span>     xlab <span class="op">=</span><span class="st">"Nombre de classements en plus ou moins"</span>,</span>
+<span>     ylab <span class="op">=</span><span class="st">"Fréquence (nombre de joueurs)"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-5-1.png" class="r-plt" width="100%" style="display: block; margin: auto;"></p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

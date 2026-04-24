@@ -65,56 +65,47 @@ df_labels_AFTT
     ## 5                 E     0.349376831            35%
     ## 6                NC     0.149216013            15%
 
+Plot of the frequency of each classement for all AFTT players (actives
+or all)
+
 ``` r
-library(ggplot2)
-
-AFTTplot <- ggplot(data = Actifs_AFTT) +
-  geom_bar(
-    aes(
-      x = classement_lettre,
-      fill = classement_lettre,
-      alpha = classement_chiffre,
-      y = after_stat(count / sum(count))
-    ),
-    col = "white",
-    lwd = 0.3,
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(
-    values = c(
-      A  = "grey30",
-      B  = "darkred",
-      C  = "darkorange",
-      D  = "goldenrod",
-      E  = "olivedrab4",
-      NC = "dodgerblue3"
-    ),
-    drop = FALSE
-  ) +
-  scale_alpha_manual(values = c(1, 0.9, 0.8, 0.7,1)) +
-  scale_y_continuous(labels = scales::percent) +
-  scale_x_discrete(drop = FALSE) +
-  coord_cartesian(ylim = c(0, 0.4)) +
-  theme_minimal() +
-  labs(
-    x = "Classement",
-    y = "Pourcentage des actifs",
-    title = "AFTT",
-    subtitle = paste(nrow(Actifs_AFTT), "actifs")
-  ) +
-  geom_text(
-    data = df_labels_AFTT,
-    aes(x = classement_lettre, y = pct_letter_AFTT, label = pct_label_AFTT),
-    vjust = -0.3,
-    size = 4
-  )
-
-AFTTplot
+graph.pct.classements(players_m)
 ```
 
 ![](Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-3-1.png)
 
+``` r
+graph.pct.classements(players_m,actifs_only = FALSE)
+```
+
+![](Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-3-2.png)
+
 ## Estimate of new classement and analysis of change
+
+To estimate the new classement for a series of players, use the
+[`players.new.classement()`](https://geocaruso.github.io/PingMeUp/reference/players.new.classement.md)
+function. It is based on current points of each players and the total
+number of active players
+[`count.actives()`](https://geocaruso.github.io/PingMeUp/reference/count.actives.md).
+The function adds 2 columns in the data frame: the new classement
+(`classement_new`) and the number of classements upward or downward
+(`classement_diff`). After computing, two tables are displayed,
+showing - a transition table with frequencies of players in each pair of
+old to new classement. Most players (about 50%) don’t change of
+classement hence the diagonal is strong. Also there are more upward
+changes than downward changes, meaning training efforts generally
+pays-off! - a difference table, where we see most players don’t change
+of classement and only few gain 3 or more classements in a season. The
+average is around 0.3 classement, which is a rate to which every club or
+province could compare as a way to measure performance.
+
+Applied to all players (default), the computation gives:
+
+``` r
+count.actives()
+```
+
+    ## [1] 17411
 
 ``` r
 players_m_new <- players.new.classement()
@@ -170,6 +161,13 @@ players_m_new <- players.new.classement()
     ##     5   105  2322  8542  5185   928   173    40    13     1     1 17315
 
 ``` r
+summary(players_m_new$classement_diff)
+```
+
+    ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    ## -3.0000  0.0000  0.0000  0.3033  1.0000  7.0000    8849
+
+``` r
 attr(players_m_new, which="diff_table")
 ```
 
@@ -178,7 +176,10 @@ attr(players_m_new, which="diff_table")
     ##     5   105  2322  8542  5185   928   173    40    13     1     1 17315
 
 ``` r
-plot(attr(players_m_new, which="diff_table")[-length(attr(players_m_new, which="diff_table"))])
+plot(attr(players_m_new, which="diff_table")[-length(attr(players_m_new, which="diff_table"))],
+     main="Montées et descentes de classements",
+     xlab ="Nombre de classements en plus ou moins",
+     ylab ="Fréquence (nombre de joueurs)")
 ```
 
 ![](Vignette3_GlobalAnalysis_files/figure-html/unnamed-chunk-5-1.png)

@@ -25,6 +25,7 @@ Imports:
     httr,
     jsonlite,
     rvest,
-    stringr
+    stringr,
+    ggplot2
 URL: https://geocaruso.github.io/PingMeUp/
 BugReports: https://github.com/geocaruso/PingMeUp/issues
