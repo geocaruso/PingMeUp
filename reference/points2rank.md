@@ -35,8 +35,8 @@ data(pts_rk_m)
 
 # Compute rank for various point values
 points2rank(5000)          # uses pts_rk_m by default
-#> [1] 1
+#> [1] 0
 points2rank(1500, pts_rk_m)
-#> [1] 2001
+#> [1] 2048
 # }
 ```
