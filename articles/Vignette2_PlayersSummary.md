@@ -5,17 +5,20 @@ A number of aggregate outputs are pre-computed with `players.summary.R`
 ## Total and active players
 
 ``` r
+
 library(PingMeUp)
 data("players_m", package = "PingMeUp")
 ```
 
 ``` r
+
 PingMeUp::count.players()
 ```
 
     ## [1] 26164
 
 ``` r
+
 PingMeUp::count.actives()
 ```
 
@@ -26,6 +29,7 @@ PingMeUp::count.actives()
 Actives per province:
 
 ``` r
+
 PingMeUp::table.actives.prov()
 ```
 
@@ -36,6 +40,7 @@ PingMeUp::table.actives.prov()
 Actives per classement (detailled or letter)
 
 ``` r
+
 PingMeUp::table.actives.class()
 ```
 
@@ -48,6 +53,7 @@ PingMeUp::table.actives.class()
     ##  267  458  572  755  934 1006 1033 1074 1124 1244 1133 1450 1776 1724 2598
 
 ``` r
+
 PingMeUp::table.actives.class.l()
 ```
 
@@ -56,6 +62,7 @@ PingMeUp::table.actives.class.l()
     ##   32  956 3267 4475 6083 2598
 
 ``` r
+
 #Where you see 75% of players are D,E or NC
 round(100*prop.table(PingMeUp::table.actives.class.l()),digits=2)
 ```
@@ -69,6 +76,7 @@ round(100*prop.table(PingMeUp::table.actives.class.l()),digits=2)
 A wrapper is made to compute those aggregates.
 
 ``` r
+
 PingMeUp::players.summary()
 ```
 
@@ -100,6 +108,7 @@ PingMeUp::players.summary()
 All can be applied to subsets, for example a club:
 
 ``` r
+
 PingMeUp::players.summary(players_m[players_m$club=="N051",])
 ```
 
@@ -127,6 +136,7 @@ PingMeUp::players.summary(players_m[players_m$club=="N051",])
 a set of provinces, e.g. French speaking:
 
 ``` r
+
 FRprov<-c("BBW","H","L","Lx","N")
 PingMeUp::players.summary(players_m[players_m$prov %in% FRprov,])
 ```
@@ -161,6 +171,7 @@ PingMeUp::players.summary(players_m[players_m$prov %in% FRprov,])
 Number of registered players (active and inactive) per club
 
 ``` r
+
 club_n_players <- data.frame(table(players_m$club))
 names(club_n_players) <- c("indice","n_players")
 club_n_players <- merge(club_n_players, club_registry[,c("indice","label","province")],by="indice")
@@ -171,6 +182,7 @@ summary(club_n_players$n_players)
     ##    2.00   30.00   46.00   54.85   70.00  303.00
 
 ``` r
+
 library(ggplot2)
 
 ggplot(club_n_players, aes(x = province, y = n_players)) +

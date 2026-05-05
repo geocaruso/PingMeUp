@@ -41,6 +41,8 @@ project.tree(".", exclude = "dev")
 #> |--club_registry.html
 #> |--count.actives.html
 #> |--count.players.html
+#> |--geom.pct.classements.grille-1.png
+#> |--geom.pct.classements.grille.html
 #> |--get.club.list.html
 #> |--get.club.player.list.m.html
 #> |--graph.pct.classements-1.png
@@ -59,6 +61,8 @@ project.tree(".", exclude = c("dev", ".git", ".Rproj.user"))
 #> |--club_registry.html
 #> |--count.actives.html
 #> |--count.players.html
+#> |--geom.pct.classements.grille-1.png
+#> |--geom.pct.classements.grille.html
 #> |--get.club.list.html
 #> |--get.club.player.list.m.html
 #> |--graph.pct.classements-1.png

@@ -8,3 +8,5 @@
   Summaries](https://geocaruso.github.io/PingMeUp/articles/Vignette2_PlayersSummary.md):
 - [Global Classements Analysis (all
   AFTT)](https://geocaruso.github.io/PingMeUp/articles/Vignette3_GlobalAnalysis.md):
+- [Province
+  Analysis](https://geocaruso.github.io/PingMeUp/articles/Vignette4_ProvinceAnalysis.md):

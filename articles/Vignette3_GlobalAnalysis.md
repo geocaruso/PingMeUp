@@ -1,10 +1,9 @@
 # Global Classements Analysis (all AFTT)
 
-*To be cont’d*
-
 ## Analysis of current percentage of each classement
 
 ``` r
+
 library(PingMeUp)
 data("players_m", package = "PingMeUp")
 
@@ -13,6 +12,7 @@ library(ggplot2)
 ```
 
 ``` r
+
 # Active players
 Actifs_AFTT <- players_m[players_m[, "position_bis"] != "Inactive", ]
 
@@ -47,6 +47,7 @@ df_class_AFTT[df_class_AFTT$classement %in% noAB0,]
     ## 47         NC              0.1492
 
 ``` r
+
 # Actives by classement letter
 tab_lettre_Actifs_AFTT <- table(Actifs_AFTT[, "classement_lettre"])
 pct_letter_AFTT <- tab_lettre_Actifs_AFTT / nrow(Actifs_AFTT)
@@ -72,6 +73,7 @@ Plot of the frequency of each classement for all AFTT players (actives
 or all)
 
 ``` r
+
 graph.pct.classements(players_m)
 ```
 
@@ -80,6 +82,7 @@ graph.pct.classements(players_m)
 graph.pct.classements
 
 ``` r
+
 graph.pct.classements(players_m,actifs_only = FALSE)
 ```
 
@@ -90,6 +93,7 @@ graph.pct.classements
 ## Analysis of points per classement
 
 ``` r
+
 players_AFTT_noA <- players_m[players_m$classement_lettre != "A", ]
 players_AFTT_noA$classement <- factor(players_AFTT_noA$classement)
 Points_class_qt <- aggregate(points ~ classement, data = players_AFTT_noA, FUN = quantile)
@@ -128,6 +132,7 @@ Points_class
     ## 17         NC  101.8065    0.00   93.2200    100.000  100.0000  801.35
 
 ``` r
+
 classement_cols <- c(B0 = "darkred",B2 = "darkred",B4 = "darkred",
   B6 = "darkred",C0 = "darkorange",C2 = "darkorange",
   C4 = "darkorange",C6 = "darkorange",D0 = "goldenrod",
@@ -185,6 +190,7 @@ compare as a way to measure performance.
 Applied to all players (default), the computation gives:
 
 ``` r
+
 count.actives()
 ```
 
@@ -193,6 +199,7 @@ count.actives()
 ```
 
 ``` r
+
 players_m_new <- players.new.classement()
 ```
 
@@ -246,15 +253,17 @@ players_m_new <- players.new.classement()
     ##     5   105  2322  8542  5185   928   173    40    13     1     1 17315
 
 ``` r
+
 summary(players_m_new$classement_diff)
 ```
 
 ``` small-text
-##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.     NAs 
 ## -3.0000  0.0000  0.0000  0.3033  1.0000  7.0000    8849
 ```
 
 ``` r
+
 attr(players_m_new, which="diff_table")
 ```
 
@@ -263,6 +272,7 @@ attr(players_m_new, which="diff_table")
     ##     5   105  2322  8542  5185   928   173    40    13     1     1 17315
 
 ``` r
+
 plot(attr(players_m_new, which="diff_table")[-length(attr(players_m_new, which="diff_table"))],
      main="Montées et descentes de classement",
      xlab ="Nombre de classements en plus ou moins",

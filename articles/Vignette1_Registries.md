@@ -79,6 +79,7 @@ installed package and made available to users.
 Users can load the latest snapshots with:
 
 ``` r
+
 data("club_registry", package = "PingMeUp")
 nrow(club_registry)
 ```
@@ -86,6 +87,7 @@ nrow(club_registry)
     ## [1] 516
 
 ``` r
+
 #For a specific province
 head(club_registry[club_registry$province=="N",])
 ```
@@ -108,6 +110,7 @@ head(club_registry[club_registry$province=="N",])
 or for players:
 
 ``` r
+
 data("players_m", package = "PingMeUp")
 names(players_m)
 ```
@@ -118,6 +121,7 @@ names(players_m)
     ## [10] "classement_lettre"  "classement_chiffre" "position_bis_p"
 
 ``` r
+
 players_m[order(players_m$position_bis)[1:5],]
 ```
 
@@ -143,6 +147,7 @@ players_m[order(players_m$position_bis)[1:5],]
 The archived versions are obtained with
 
 ``` r
+
 data("club_registry_archive", package = "PingMeUp")
 data("players_m_archive", package = "PingMeUp")
 ```
@@ -150,6 +155,7 @@ data("players_m_archive", package = "PingMeUp")
 or for specific snapshots once the dataset is loaded:
 
 ``` r
+
 club_registry_archive[["2026_04"]]
 players_m_archive[["2026_04"]]
 ```
