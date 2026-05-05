@@ -6,9 +6,6 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
-*To be cont'd*
-
-## Analysis of current percentage of each classement 
 
 ```{r}
 library(PingMeUp)
@@ -18,18 +15,175 @@ library(ggridges)
 library(ggplot2)
 ```
 
-```{r}
-# Active players
-table.actives.prov()
+## Distribution of players and actives across provinces 
+
+```{r, fig.cap="graph.players.prov", fig.align='center', out.width='100%'}
+# Plot players actives and non-actives
+df <- data.frame(
+  prov = names(table(players_m$prov)),
+  p = as.numeric(table(players_m$prov)),
+  a = as.numeric(table.actives.prov())
+)
+
+df <- df[order(df$a, decreasing = TRUE), ]
+df$prov <- factor(df$prov, levels = df$prov)
+prov_order <- df$prov
+
+ggplot(data = df) +
+  geom_bar(aes(x = prov, y = p, alpha = "Inactive"),
+           stat = "identity", fill = "purple") +
+  geom_bar(aes(x = prov, y = a, alpha = "Active"),
+           stat = "identity", fill = "purple") +
+  scale_alpha_manual(
+    name = "",
+    values = c("Inactive" = 0.5, "Active" = 1)
+  ) +
+  labs(x = "Province", y = "Number of players",
+       title = "Players and active players per province") +
+  theme_minimal()
 ```
+
+## Analysis of current percentage of each classement 
 
 Plot of the frequency of each classement for active players for each province. The pink bar indicates the percentage of players in each classement letter as of the AFTT grille (average, i.e. see share.m.B2toNC()).
 
 ```{r, fig.cap="graph.pct.classements.prov", fig.align='center', out.width='100%'}
 
-lapply(split(players_m, players_m$prov), function(df) {
-  graph.pct.classements(df, ylim_max = 0.5,title = paste(unique(df$prov), "Part des classements"))+geom.pct.classements.grille()
+
+lapply(as.character(prov_order), function(p) {
+  p.df <- players_m[players_m$prov == p, ]
+
+  graph.pct.classements(
+    p.df,
+    ylim_max = 0.5,
+    title = paste(p, "Part des classements")
+  ) + geom.pct.classements.grille()
 })
 ```
 
+## Over/under representation of a classement in a province compared to overall?
 
+```{r}
+tab <- table(players_m$prov, players_m$classement_lettre)
+
+prop_prov <- prop.table(tab, 1)
+prop_all <- prop.table(colSums(tab))
+
+diff <- sweep(prop_prov, 2, prop_all, "-")
+
+df_long <- as.data.frame(as.table(diff))
+colnames(df_long) <- c("prov", "classement.l", "diff")
+
+df_long$prov <- factor(df_long$prov, levels = prov_order)
+```
+
+```{r}
+ggplot(df_long, aes(x = classement.l, y = prov, fill = diff)) +
+  geom_tile() +
+  scale_fill_gradient2(
+    low = "darkblue",
+    mid = "white",
+    high = "darkred",
+    midpoint = 0,
+    name = "Percentage-point\ndeviation from\noverall (AFTT)"
+  ) +
+  labs(
+    title = "Over/Under-representation of classement by Province",
+    x = "Classement",
+    y = "Province"
+  ) +
+  theme_minimal()
+```
+
+Or slightly cleaner maybe:
+
+```{r}
+df_long2 <- df_long[df_long$classement.l != "A",]
+
+ggplot(df_long2, aes(x = prov, y = diff, fill = diff)) +
+  geom_col() +
+  coord_flip() +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  facet_wrap(~classement.l) +
+  scale_fill_gradient2(
+    low = "darkblue",
+    mid = "white",
+    high = "darkred",
+    midpoint = 0,
+    guide = "none"
+  ) +
+  labs(
+    title = "Over/Under-representation by Province and Classement (A excluded)",
+    x = "Province",
+    y = "Percentage-point deviation"
+  ) +
+  theme_minimal()
+
+```
+
+There is not only more players in the French speaking provinces but also sytematically less NC in relative terms, indicating a stronger engagement in table tennis as a competitive sport.
+
+# Province season scores adjusted for classement structure
+
+Compare total points per province to their expected values given the distribution of classements at the start of the season within each province. This corrects for compositional effects (e.g. differences in the proportion of NC players across provinces). The expected points are computed by assigning each player the average point value of their classement and aggregating by province. The difference between actual and expected points indicates whether a province is overperforming or underperforming relative to its classement structure.
+
+
+```{r}
+active_noa <- players_m[
+  players_m$position_bis != "Inactive" &
+  players_m$classement_lettre != "A",
+]
+mean_class <- tapply(active_noa$points,
+                     active_noa$classement,
+                     mean,
+                     na.rm = TRUE)
+active_noa$expected_points <- mean_class[active_noa$classement]
+
+active_noa$diff_points <- active_noa$points - active_noa$expected_points
+prov_diff_mean <- aggregate(diff_points ~ prov, data = active_noa, mean)
+prov_diff_mean
+```
+
+Where we see the compositional effect seems to reappear. This is because 1 point in the lower classements more easily leads to a classement change than in the higher classements (by construction of the classements). This nonlinearity needs to be accounted for. One way is to standardize the deviations to the mean per classement, which gives us a sort of "z-score" of performance relative to the expected points for that classement. A second manner is to compute the rank within each classement, which is more robust to outliers and non-normality of points distribution.
+
+```{r}
+active_noa$z_points <- ave(active_noa$points,
+                            active_noa$classement,
+                            FUN = function(x) (x - mean(x)) / sd(x))
+prov_zscore_mean <- aggregate(z_points ~ prov, data = active_noa, mean)
+prov_zscore_mean
+
+active_noa$p_points <- ave(active_noa$points,
+                            active_noa$classement,
+                            FUN = function(x) rank(x) / length(x))
+prov_pscore_mean <- aggregate(p_points ~ prov, data = active_noa, mean)
+prov_pscore_mean
+```
+
+The higher performance of provinces with less and lower classments is still there, suggesting a structural effect of the progression system rather than a true provincial effect. The only way out is to  model points as a function of classement and average residuals or also including a province fixed effect:
+
+```{r}
+#Note: classment is a factor but unordered to let the model decide on coef without assuming linearity with points.
+# Refs for easier reading: "Hainaut" and "NC" as baselines:
+active_noa$prov <- relevel(factor(active_noa$prov), ref = "H")
+active_noa$classement <- relevel(factor(active_noa$classement), ref = "NC")
+
+pts_model <- lm(points ~ classement, data = active_noa)
+summary(pts_model)
+
+pts_model_prov <- lm(points ~ classement + prov, data = active_noa)
+summary(pts_model_prov)
+
+active_noa$residuals <- pts_model$residuals
+prov_resid_mean <- aggregate(residuals ~ prov, data = active_noa, mean)
+prov_resid_mean
+
+```
+Classement's related coefficients shows expected mean point for each classement and their gaps show existing non-linearity. Those coefficients barely change when provinces are added.
+
+Both residuals aggregation from the base model or the province coefficients in the fixed effect model confirm that, once we control for the classements structure, Flemish speaking provinces perform higher, i.e. more points than expected.
+In terms of provinces, the French speaking regions are barely different to the baseline (Hainaut).
+
+Across multiple normalization strategies (fixed effects model, residuals of classement-points model,  within-class z-scores, or rank-based scores), Flemish-speaking provinces systematically exhibit higher average performance indicators.
+
+It goes in line with the first part which showed that French-speaking provinces tend to have a much higher share of activated players, suggesting a different sport ecosystem overall: more inclusive competition, i.e. more recreational players entering official or remaining active in competition in French speaking provinces. Solving the composition bias does not necessarily solves a potential selection bias.

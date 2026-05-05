@@ -19,20 +19,20 @@ data("players_m", package = "PingMeUp")
 
 
 ```{r}
-PingMeUp::count.players()
-PingMeUp::count.actives()
+count.players()
+count.actives()
 ```
 ## Active players per province or classement
 
 Actives per province:
 ```{r}
-PingMeUp::table.actives.prov()
+table.actives.prov()
 ```
 
 Actives per classement (detailled or letter)
 ```{r}
-PingMeUp::table.actives.class()
-PingMeUp::table.actives.class.l()
+table.actives.class()
+table.actives.class.l()
 #Where you see 75% of players are D,E or NC
 round(100*prop.table(PingMeUp::table.actives.class.l()),digits=2)
 ```
@@ -41,19 +41,19 @@ round(100*prop.table(PingMeUp::table.actives.class.l()),digits=2)
 
 A wrapper is made to compute those aggregates.
 ```{r}
-PingMeUp::players.summary()
+players.summary()
 ```
  All can be applied to subsets, for example a club:
  
 ```{r}
-PingMeUp::players.summary(players_m[players_m$club=="N051",])
+players.summary(players_m[players_m$club=="N051",])
 ```
 
 a set of provinces, e.g. French speaking:
 
 ```{r}
 FRprov<-c("BBW","H","L","Lx","N")
-PingMeUp::players.summary(players_m[players_m$prov %in% FRprov,])
+players.summary(players_m[players_m$prov %in% FRprov,])
 ```
 
 ## Number of players and clubs
@@ -74,8 +74,8 @@ summary(club_n_players$n_players)
 ```{r, fig.cap="Distribution of Club Size by Province"}
 library(ggplot2)
 
-ggplot(club_n_players, aes(x = province, y = n_players)) +
-  geom_boxplot(fill = "lightblue") +
+ggplot(club_n_players, aes(x = reorder(province, -n_players, FUN = median), y = n_players)) +
+  geom_boxplot(fill = "purple") +
   labs(
     title = "Distribution of Club Size by Province",
     x = "Province",

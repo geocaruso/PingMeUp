@@ -10,13 +10,13 @@ data("players_m", package = "PingMeUp")
 ```
 
 ``` r
-PingMeUp::count.players()
+count.players()
 ```
 
     ## [1] 26197
 
 ``` r
-PingMeUp::count.actives()
+count.actives()
 ```
 
     ## [1] 17657
@@ -26,7 +26,7 @@ PingMeUp::count.actives()
 Actives per province:
 
 ``` r
-PingMeUp::table.actives.prov()
+table.actives.prov()
 ```
 
     ## 
@@ -36,7 +36,7 @@ PingMeUp::table.actives.prov()
 Actives per classement (detailled or letter)
 
 ``` r
-PingMeUp::table.actives.class()
+table.actives.class()
 ```
 
     ## 
@@ -48,7 +48,7 @@ PingMeUp::table.actives.class()
     ##  168  268  462  576  761  939 1012 1037 1078 1127 1262 1149 1473 1802 1770 2676
 
 ``` r
-PingMeUp::table.actives.class.l()
+table.actives.class.l()
 ```
 
     ## 
@@ -69,7 +69,7 @@ round(100*prop.table(PingMeUp::table.actives.class.l()),digits=2)
 A wrapper is made to compute those aggregates.
 
 ``` r
-PingMeUp::players.summary()
+players.summary()
 ```
 
     ## $count.players
@@ -100,7 +100,7 @@ PingMeUp::players.summary()
 All can be applied to subsets, for example a club:
 
 ``` r
-PingMeUp::players.summary(players_m[players_m$club=="N051",])
+players.summary(players_m[players_m$club=="N051",])
 ```
 
     ## $count.players
@@ -128,7 +128,7 @@ a set of provinces, e.g. French speaking:
 
 ``` r
 FRprov<-c("BBW","H","L","Lx","N")
-PingMeUp::players.summary(players_m[players_m$prov %in% FRprov,])
+players.summary(players_m[players_m$prov %in% FRprov,])
 ```
 
     ## $count.players
@@ -173,8 +173,8 @@ summary(club_n_players$n_players)
 ``` r
 library(ggplot2)
 
-ggplot(club_n_players, aes(x = province, y = n_players)) +
-  geom_boxplot(fill = "lightblue") +
+ggplot(club_n_players, aes(x = reorder(province, -n_players, FUN = median), y = n_players)) +
+  geom_boxplot(fill = "purple") +
   labs(
     title = "Distribution of Club Size by Province",
     x = "Province",
