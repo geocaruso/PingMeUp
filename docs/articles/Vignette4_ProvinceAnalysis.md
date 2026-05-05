@@ -19,7 +19,7 @@ table.actives.prov()
 
     ## 
     ##    A  BBW    H    L   LK   Lx    N  OVL Vl-B  WVL 
-    ## 1151 1542 3672 2529  897 1729 3043 1138  834  876
+    ## 1164 1553 3698 2551 1000 1747 3060 1154  847  883
 
 Plot of the frequency of each classement for active players for each
 province. The pink bar indicates the percentage of players in each

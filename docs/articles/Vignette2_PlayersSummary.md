@@ -13,13 +13,13 @@ data("players_m", package = "PingMeUp")
 PingMeUp::count.players()
 ```
 
-    ## [1] 26164
+    ## [1] 26197
 
 ``` r
 PingMeUp::count.actives()
 ```
 
-    ## [1] 17411
+    ## [1] 17657
 
 ## Active players per province or classement
 
@@ -31,7 +31,7 @@ PingMeUp::table.actives.prov()
 
     ## 
     ##    A  BBW    H    L   LK   Lx    N  OVL Vl-B  WVL 
-    ## 1151 1542 3672 2529  897 1729 3043 1138  834  876
+    ## 1164 1553 3698 2551 1000 1747 3060 1154  847  883
 
 Actives per classement (detailled or letter)
 
@@ -42,10 +42,10 @@ PingMeUp::table.actives.class()
     ## 
     ##   A1  A11  A12  A13  A14  A15  A16  A19   A2  A20  A21  A22  A23   A3   A4   A5 
     ##    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1 
-    ##   A6   A7   A8 As10 As13 As14 As15 As18 As20  As3  As5  As7  As8  As9   B0   B2 
-    ##    1    1    1    1    1    1    2    1    1    1    1    1    2    1   64  167 
-    ##   B4   B6   C0   C2   C4   C6   D0   D2   D4   D6   E0   E2   E4   E6   NC 
-    ##  267  458  572  755  934 1006 1033 1074 1124 1244 1133 1450 1776 1724 2598
+    ##   A6   A7   A8 As10 As13 As14 As15 As18 As20  As3  As4  As5  As7  As8  As9   B0 
+    ##    1    1    1    1    1    1    2    1    1    1    1    1    1    2    1   64 
+    ##   B2   B4   B6   C0   C2   C4   C6   D0   D2   D4   D6   E0   E2   E4   E6   NC 
+    ##  168  268  462  576  761  939 1012 1037 1078 1127 1262 1149 1473 1802 1770 2676
 
 ``` r
 PingMeUp::table.actives.class.l()
@@ -53,7 +53,7 @@ PingMeUp::table.actives.class.l()
 
     ## 
     ##    A    B    C    D    E   NC 
-    ##   32  956 3267 4475 6083 2598
+    ##   33  962 3288 4504 6194 2676
 
 ``` r
 #Where you see 75% of players are D,E or NC
@@ -62,7 +62,7 @@ round(100*prop.table(PingMeUp::table.actives.class.l()),digits=2)
 
     ## 
     ##     A     B     C     D     E    NC 
-    ##  0.18  5.49 18.76 25.70 34.94 14.92
+    ##  0.19  5.45 18.62 25.51 35.08 15.16
 
 ## Wrapping up and subsets:
 
@@ -73,29 +73,29 @@ PingMeUp::players.summary()
 ```
 
     ## $count.players
-    ## [1] 26164
+    ## [1] 26197
     ## 
     ## $count.actives
-    ## [1] 17411
+    ## [1] 17657
     ## 
     ## $table.actives.prov
     ## 
     ##    A  BBW    H    L   LK   Lx    N  OVL Vl-B  WVL 
-    ## 1151 1542 3672 2529  897 1729 3043 1138  834  876 
+    ## 1164 1553 3698 2551 1000 1747 3060 1154  847  883 
     ## 
     ## $table.actives.class
     ## 
     ##   A1  A11  A12  A13  A14  A15  A16  A19   A2  A20  A21  A22  A23   A3   A4   A5 
     ##    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1 
-    ##   A6   A7   A8 As10 As13 As14 As15 As18 As20  As3  As5  As7  As8  As9   B0   B2 
-    ##    1    1    1    1    1    1    2    1    1    1    1    1    2    1   64  167 
-    ##   B4   B6   C0   C2   C4   C6   D0   D2   D4   D6   E0   E2   E4   E6   NC 
-    ##  267  458  572  755  934 1006 1033 1074 1124 1244 1133 1450 1776 1724 2598 
+    ##   A6   A7   A8 As10 As13 As14 As15 As18 As20  As3  As4  As5  As7  As8  As9   B0 
+    ##    1    1    1    1    1    1    2    1    1    1    1    1    1    2    1   64 
+    ##   B2   B4   B6   C0   C2   C4   C6   D0   D2   D4   D6   E0   E2   E4   E6   NC 
+    ##  168  268  462  576  761  939 1012 1037 1078 1127 1262 1149 1473 1802 1770 2676 
     ## 
     ## $table.actives.class.l
     ## 
     ##    A    B    C    D    E   NC 
-    ##   32  956 3267 4475 6083 2598
+    ##   33  962 3288 4504 6194 2676
 
 All can be applied to subsets, for example a club:
 
@@ -107,22 +107,22 @@ PingMeUp::players.summary(players_m[players_m$club=="N051",])
     ## [1] 186
     ## 
     ## $count.actives
-    ## [1] 111
+    ## [1] 113
     ## 
     ## $table.actives.prov
     ## 
     ##   N 
-    ## 111 
+    ## 113 
     ## 
     ## $table.actives.class
     ## 
     ## A14  B0  B2  B4  B6  C0  C2  C4  C6  D0  D2  D4  D6  E0  E2  E4  E6  NC 
-    ##   1   4   3   4   7   6   5   6   9  10   4   6   4   8   7  13   4  10 
+    ##   1   4   3   4   7   6   5   6   9  10   4   6   5   8   7  13   5  10 
     ## 
     ## $table.actives.class.l
     ## 
     ##  A  B  C  D  E NC 
-    ##  1 18 26 24 32 10
+    ##  1 18 26 25 33 10
 
 a set of provinces, e.g. French speaking:
 
@@ -132,29 +132,29 @@ PingMeUp::players.summary(players_m[players_m$prov %in% FRprov,])
 ```
 
     ## $count.players
-    ## [1] 17146
+    ## [1] 17169
     ## 
     ## $count.actives
-    ## [1] 12515
+    ## [1] 12609
     ## 
     ## $table.actives.prov
     ## 
     ##  BBW    H    L   Lx    N 
-    ## 1542 3672 2529 1729 3043 
+    ## 1553 3698 2551 1747 3060 
     ## 
     ## $table.actives.class
     ## 
     ##   A1  A11  A12  A14  A15  A16  A21  A22  A23   A3   A4 As10 As13 As14 As15 As18 
     ##    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1 
     ## As20  As9   B0   B2   B4   B6   C0   C2   C4   C6   D0   D2   D4   D6   E0   E2 
-    ##    1    1   42  114  181  348  411  545  685  742  791  797  826  892  875 1146 
+    ##    1    1   42  115  181  352  414  550  690  745  794  800  829  901  878 1151 
     ##   E4   E6   NC 
-    ## 1345 1030 1727 
+    ## 1350 1036 1763 
     ## 
     ## $table.actives.class.l
     ## 
     ##    A    B    C    D    E   NC 
-    ##   18  685 2383 3306 4396 1727
+    ##   18  690 2399 3324 4415 1763
 
 ## Number of players and clubs
 
@@ -168,7 +168,7 @@ summary(club_n_players$n_players)
 ```
 
     ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-    ##    2.00   30.00   46.00   54.85   70.00  303.00
+    ##    2.00   30.00   46.00   54.92   70.00  304.00
 
 ``` r
 library(ggplot2)
