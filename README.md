@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # Ping Me Up project
 
 <https://geocaruso.github.io/PingMeUp/>

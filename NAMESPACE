@@ -3,6 +3,7 @@
 export(classement.transitions)
 export(count.actives)
 export(count.players)
+export(geom.pct.classements.grille)
 export(get.club.list)
 export(get.club.player.list.m)
 export(graph.pct.classements)

@@ -11,6 +11,9 @@
   : Count active players
 - [`count.players()`](https://geocaruso.github.io/PingMeUp/reference/count.players.md)
   : Count total players
+- [`geom.pct.classements.grille()`](https://geocaruso.github.io/PingMeUp/reference/geom.pct.classements.grille.md)
+  : Create geom bar of the shares of each classement letter in the AFTT
+  grille
 - [`get.club.list()`](https://geocaruso.github.io/PingMeUp/reference/get.club.list.md)
   : Retrieve AFTT club list
 - [`get.club.player.list.m()`](https://geocaruso.github.io/PingMeUp/reference/get.club.player.list.m.md)

@@ -1,7 +1,5 @@
 # Global Classements Analysis (all AFTT)
 
-*To be cont’d*
-
 ## Analysis of current percentage of each classement
 
 ``` r

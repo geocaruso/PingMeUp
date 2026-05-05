@@ -1,0 +1,35 @@
+---
+title: "Province Analysis"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Province Analysis}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+*To be cont'd*
+
+## Analysis of current percentage of each classement 
+
+```{r}
+library(PingMeUp)
+data("players_m", package = "PingMeUp")
+
+library(ggridges)
+library(ggplot2)
+```
+
+```{r}
+# Active players
+table.actives.prov()
+```
+
+Plot of the frequency of each classement for active players for each province. The pink bar indicates the percentage of players in each classement letter as of the AFTT grille (average, i.e. see share.m.B2toNC()).
+
+```{r, fig.cap="graph.pct.classements.prov", fig.align='center', out.width='100%'}
+
+lapply(split(players_m, players_m$prov), function(df) {
+  graph.pct.classements(df, ylim_max = 0.5,title = paste(unique(df$prov), "Part des classements"))+geom.pct.classements.grille()
+})
+```
+
+
