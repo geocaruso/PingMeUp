@@ -125,24 +125,24 @@ names(players_m)
 players_m[order(players_m$position_bis)[1:5],]
 ```
 
-    ##              position position_bis                               nom classement
-    ## L.L119.1          001          001                RASSENFOSSE ADRIEN         A3
-    ## L.L323.1          002          002                    ALLEGRO MARTIN         A1
-    ## A.A176.1          003          003 ROBINOT QUENTIN (Joueur étranger)        As5
-    ## OVL.OVL032.1      003          003                   NUYTINCK CEDRIC         A2
-    ## L.L323.2          004          004                   LAMBIET FLORENT         A4
-    ##                club match points licence prov classement_lettre
-    ## L.L119.1       L119    99 3037.5  140691    L                 A
-    ## L.L323.1       L323    99 3007.5  110538    L                 A
-    ## A.A176.1       A176    29 2987.4  531030    A                 A
-    ## OVL.OVL032.1 OVL032    99 2990.0  504553  OVL                 A
-    ## L.L323.2       L323    99 2970.0  120001    L                 A
-    ##              classement_chiffre position_bis_p
-    ## L.L119.1                     99              1
-    ## L.L323.1                     99              2
-    ## A.A176.1                     99              1
-    ## OVL.OVL032.1                 99              1
-    ## L.L323.2                     99              3
+    ##                position position_bis                               nom
+    ## Vl-B.Vl-B293.1      000          000  CARVALHO DIOGO (Joueur étranger)
+    ## L.L119.1            001          001                RASSENFOSSE ADRIEN
+    ## A.A176.1            002          002 ROBINOT QUENTIN (Joueur étranger)
+    ## L.L323.1            002          002                    ALLEGRO MARTIN
+    ## OVL.OVL032.1        003          003                   NUYTINCK CEDRIC
+    ##                classement    club match  points licence prov classement_lettre
+    ## Vl-B.Vl-B293.1        As4 Vl-B293    10 3052.60  529675 Vl-B                 A
+    ## L.L119.1               A3    L119    99 3037.50  140691    L                 A
+    ## A.A176.1              As5    A176    32 2995.32  531030    A                 A
+    ## L.L323.1               A1    L323    99 3007.50  110538    L                 A
+    ## OVL.OVL032.1           A2  OVL032    99 2990.00  504553  OVL                 A
+    ##                classement_chiffre position_bis_p
+    ## Vl-B.Vl-B293.1                 99              1
+    ## L.L119.1                       99              1
+    ## A.A176.1                       99              1
+    ## L.L323.1                       99              2
+    ## OVL.OVL032.1                   99              1
 
 The archived versions are obtained with
 
