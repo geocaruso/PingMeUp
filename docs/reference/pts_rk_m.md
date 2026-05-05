@@ -40,12 +40,12 @@ exported both as `.json` (for the web app) and `.rda` (for local use).
 data(pts_rk_m)
 head(pts_rk_m)
 #>       pts   rk
-#> 1 1753.68  972
-#> 2 1730.67 1053
-#> 3 1720.56 1092
-#> 4 1701.42 1156
-#> 5 1639.49 1364
-#> 6 1524.04 1893
+#> 1 1741.08 1029
+#> 2 1736.43 1043
+#> 3 1703.76 1149
+#> 4 1698.96 1163
+#> 5 1664.51 1289
+#> 6 1558.96 1747
 
  if (FALSE) # Dames
 data(pts_rk_f)
@@ -55,5 +55,5 @@ head(pts_rk_f)
 
 # Use in rank-from-points computation
 points2rank(1500, pts_rk_m)
-#> [1] 2001
+#> [1] 2048
 ```
